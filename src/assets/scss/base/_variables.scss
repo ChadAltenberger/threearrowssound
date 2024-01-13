@@ -1,12 +1,13 @@
 // Fonts
-$font-primary: "PRIMARY-FONT-NAME", Helvetica, sans-serif;
-$font-secondary: "SECONDARY-FONT-NAME", Helvetica, sans-serif;
+$font-primary: "Figtree", Helvetica, sans-serif;
+$font-secondary: "Montserrat", Helvetica, sans-serif;
+// $font-secondary: "Josefin Sans", Helvetica, sans-serif;
 
 // Bootstrap Icons - fonts
 $bootstrap-icons-font-src: url("../fonts/bootstrap-icons.woff2") format("woff2"), url("../fonts/bootstrap-icons.woff") format("woff") !default;
 
-$primary: #2d4c6f;
-$secondary: #f1cb13;
+$primary: #0c090a;
+$secondary: #00abac;
 $white: #ffffff;
 $black: #000000;
 $transparent: #ffffff00;
@@ -16,7 +17,7 @@ $transparent: #ffffff00;
 // $gray-dark: #63666a;
 // $gray-light: lighten(#a7a8aa, 25%);
 
-$body-bg: #f5f5f5;
+$body-bg: #ffffff;
 
 // $info: 		;
 // $body-color: ;

@@ -23,6 +23,12 @@
       "oAP" : "\/dist\/.vscode",
       "oF" : 0
     },
+    "\/dist" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/dist\/dist",
+      "oF" : 0
+    },
     "\/icon.png" : {
       "ft" : 32768,
       "iS" : 33114,
@@ -102,6 +108,19 @@
       "opt" : 1,
       "plM" : 3758088159,
       "prP" : 0
+    },
+    "\/src\/assets\/img\/tas-logo.png" : {
+      "ft" : 32768,
+      "iS" : 89139,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/tas-logo.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
     },
     "\/src\/assets\/js\/base\/_jquery-global.js" : {
       "bF" : 0,
@@ -15611,6 +15630,14 @@
       "pg" : 2,
       "sct" : 0
     },
+    "\/src\/assets\/video\/header-vid.mp4" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/video\/header-vid.mp4",
+      "oF" : 0
+    },
     "\/src\/error.kit" : {
       "cB" : 1,
       "ft" : 2048,
@@ -15648,7 +15675,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/icon.png",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 726863439.50102901
+    "lastBuiltDate" : 726865112.54953897
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

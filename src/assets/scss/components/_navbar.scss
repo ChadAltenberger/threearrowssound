@@ -1,10 +1,6 @@
 #main-nav {
-    #sam-flag {
-        height: 30px;
-        width: 21px;
-
-        .cls-1 {
-            fill: $secondary;
-        }
+    transform: translateY(-100%);
+    .nav-logo {
+        width: 6rem;
     }
 }

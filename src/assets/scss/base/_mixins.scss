@@ -1,0 +1,40 @@
+// position absolute
+@mixin absolute($top: 0, $left: 0, $right: auto, $bottom: auto) {
+    position: absolute;
+    left: $left;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+}
+// vertical alignment
+@mixin inline($alignment: middle) {
+    display: inline-block;
+    vertical-align: $alignment;
+}
+// fonts
+@mixin font($size: 16, $lineheight: 16, $weight: 400) {
+    font-size: $size + px;
+    line-height: $lineheight + px;
+    font-weight: $weight;
+}
+
+// Media that spans multiple breakpoint widths, allowing custom values OR grid breakpoints.
+// Makes the @content apply between the min and max breakpoints OR custom pixel values
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+    $min: if(type-of($lower) == "string", breakpoint-min($lower, $breakpoints), $lower);
+    $max: if(type-of($upper) == "string", breakpoint-max($upper, $breakpoints), $upper);
+
+    @if $min != null and $max != null {
+        @media (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if $max == null {
+        @include media-breakpoint-up($lower, $breakpoints) {
+            @content;
+        }
+    } @else if $min == null {
+        @include media-breakpoint-down($upper, $breakpoints) {
+            @content;
+        }
+    }
+}

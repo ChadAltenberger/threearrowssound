@@ -1,0 +1,11 @@
+{
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "#00ABAC", // Top window bar
+        "titleBar.inactiveBackground": "#00ABAC99", // Top window bar inactive (add '99' to end of hex)
+        "titleBar.activeForeground": "#ffffff", // Top window bar - text
+
+        "activityBarBadge.background": "#00ABAC", // Side bar - badge icon background
+        "activityBarBadge.foreground": "#ffffff", // Side bar - badge text
+        "activityBar.activeBorder": "#00ABAC" // Side bar - active indicator border
+    }
+}

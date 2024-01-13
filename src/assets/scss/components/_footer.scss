@@ -1,0 +1,29 @@
+footer {
+    ul.social-links {
+        li {
+            height: 24px;
+            width: 24px;
+
+            margin-left: 20px;
+            display: inline-block;
+
+            &:first-of-type {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    // SAM flag
+    #sam-flag {
+        position: relative;
+        top: -2px;
+        margin: 0 2px;
+
+        height: 30px;
+        width: 21px;
+
+        .cls-1 {
+            fill: $secondary;
+        }
+    }
+}

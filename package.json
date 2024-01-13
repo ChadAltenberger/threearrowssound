@@ -1,0 +1,23 @@
+{
+  "name": "codekit-project",
+  "version": "1.0.0",
+  "description": "CodeKit created this starter package.json file. You should customize it appropriately.",
+  "scripts": {
+    "deploy-dev": "aws s3 sync dist/ s3://www.summitathletics-dev.com/xxx/xxx --size-only --acl=public-read --delete --cache-control='max-age=0, no-cache' --exclude '*.html' --exclude '*.css' --exclude '*.js' && npm run html-dev",
+    "html-dev": "aws s3 sync dist/ s3://www.summitathletics-dev.com/xxx/xxx --acl=public-read --delete --cache-control='max-age=0, no-cache' --exclude '*' --include '*.html' --include '*.css' --include '*.js'",
+    "deploy": "aws s3 sync dist/ s3://xxxx.com --size-only --acl=public-read  --delete --cache-control='max-age=31536000' --exclude '*.html' --exclude '*.css' --exclude '*.js' && npm run css-js",
+    "css-js": "aws s3 sync dist/ s3://xxxx.com --acl=public-read  --delete --cache-control='max-age=31536000' --exclude '*' --include '*.css' --include '*.js' && npm run html",
+    "html": "aws s3 sync dist/ s3://xxxx.com --acl=public-read  --delete --cache-control='max-age=0, no-cache' --exclude '*' --include '*.html'",
+    "live-dev": "concurrently \"npm run deploy\" \"npm run deploy-dev\""
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "repository": {},
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "aos": "^2.3.4",
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.9.1",
+    "rellax": "^1.12.1"
+  }
+}

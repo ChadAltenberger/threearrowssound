@@ -15705,6 +15705,19 @@
       "oA" : 0,
       "oAP" : "\/dist\/style-guide.html",
       "oF" : 0
+    },
+    "\/tas-lines.png" : {
+      "ft" : 32768,
+      "iS" : 1265,
+      "oA" : 0,
+      "oAP" : "\/dist\/tas-lines.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
     }
   },
   "hooks" : [
@@ -15717,8 +15730,8 @@
     "creationDate" : 499370232,
     "displayValue" : "threearrowssound",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "\/icon.png",
-    "iconImageWasSetByUser" : 0,
+    "iconImageName" : "\/tas-lines.png",
+    "iconImageWasSetByUser" : 1,
     "lastBuiltDate" : 726865112.54953897
   },
   "projectSettings" : {

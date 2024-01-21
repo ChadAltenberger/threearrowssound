@@ -1,0 +1,86 @@
+export const songs = [
+    {
+        waveformId: "different-wave",
+        artist: "Wild Season",
+        songTitle: "Different Wave",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "mexico",
+        artist: "Wild Season",
+        songTitle: "Mexico",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "leaving-me-soon",
+        artist: "Salt Air",
+        songTitle: "Leaving Me Soon",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "sweet-little-love",
+        artist: "Salt Air",
+        songTitle: "Sweet Little Love",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "the-hills",
+        artist: "Strong Water",
+        songTitle: "The Hills",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "bend",
+        artist: "Strong Water",
+        songTitle: "Bend",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "head-in-the-clouds",
+        artist: "Yours For Mine",
+        songTitle: "Head in the Clouds",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "break-the-teeth",
+        artist: "Yours For Mine",
+        songTitle: "Break the Teeth",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "phantom-seas",
+        artist: "Maple Union",
+        songTitle: "Phantom Seas",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "unwound",
+        artist: "Maple Union",
+        songTitle: "Unwound",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "touch-and-go",
+        artist: "Heidi Riddell",
+        songTitle: "Touch and Go",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "settle-down",
+        artist: "Heidi Riddell",
+        songTitle: "Settle Down",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "consumed",
+        artist: "Chris Redmon",
+        songTitle: "Consumed",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+    {
+        waveformId: "trick-of-the-light",
+        artist: "Delaplane",
+        songTitle: "Trick of the Light",
+        mp3: "assets/audio/different-wave.mp3",
+    },
+];

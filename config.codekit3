@@ -83,6 +83,14 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/src\/assets\/audio\/different-wave.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/different-wave.mp3",
+      "oF" : 0
+    },
     "\/src\/assets\/fonts\/bootstrap-icons.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -98,6 +106,19 @@
       "oA" : 2,
       "oAP" : "\/dist\/assets\/fonts\/bootstrap-icons.woff2",
       "oF" : 0
+    },
+    "\/src\/assets\/img\/portfolio-bg.jpg" : {
+      "ft" : 16384,
+      "iS" : 108377,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/portfolio-bg.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
     },
     "\/src\/assets\/img\/sam-flag.svg" : {
       "ft" : 2097152,
@@ -206,6 +227,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/dist\/assets\/js\/js\/_set-line-width.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/assets\/js\/components\/_song-list.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/dist\/assets\/js\/js\/_song-list.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -15732,7 +15764,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/tas-lines.png",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 726865112.54953897
+    "lastBuiltDate" : 727566090.42440295
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

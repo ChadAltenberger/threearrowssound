@@ -160,5 +160,35 @@
     #portfolio {
         position: relative;
         padding-top: 12rem;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../img/portfolio-bg.webp) no-repeat center center / cover;
+            filter: grayscale(1);
+            opacity: 0.37;
+            z-index: -1;
+        }
+
+        .music {
+            .song-title {
+                font-size: 1.2em;
+            }
+
+            .track {
+                .play {
+                    cursor: pointer;
+                    transition: color 0.2s;
+
+                    &:hover {
+                        color: $gray !important;
+                    }
+                }
+            }
+        }
     }
 }

@@ -149,7 +149,11 @@
             position: relative;
             outline: 2px solid $white;
             outline-offset: -2rem;
-            margin-bottom: -12rem;
+            margin-bottom: 2rem;
+
+            @include media-breakpoint-up(lg) {
+                margin-bottom: -12rem;
+            }
         }
 
         p.h5 {
@@ -174,20 +178,103 @@
             z-index: -1;
         }
 
-        .music {
-            .song-title {
-                font-size: 1.2em;
-            }
+        .audio-player {
+            position: relative;
+            opacity: 0.95;
 
-            .track {
-                .play {
-                    cursor: pointer;
-                    transition: color 0.2s;
+            .btn-wrapper {
+                width: 4rem;
+                height: 4rem;
+                border-right: 1px solid $gray;
+                cursor: pointer;
+                transition: background-color 0.2s;
 
-                    &:hover {
-                        color: $gray !important;
+                .play-pause-btn {
+                    transition: transform 0.2s;
+                }
+
+                &:hover {
+                    background-color: lighten($primary, 8%);
+
+                    .play-pause-btn {
+                        transform: scale(1.05);
                     }
                 }
+            }
+
+            .track-info {
+                position: relative;
+                width: 100%;
+                height: 4rem;
+                z-index: 1;
+
+                .song-title {
+                    font-size: 1.1em;
+                }
+
+                .progress-bar-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+
+                    .progress-bar {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 100%;
+                        background-color: $secondary;
+                        opacity: 0.25;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            .btn-wrapper {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #services {
+        position: relative;
+        z-index: 0;
+        overflow-y: hidden;
+        padding-bottom: 15rem;
+
+        .service-title {
+            svg {
+                width: 12rem;
+                opacity: 0.3;
+            }
+
+            &.mixing {
+                svg {
+                    path {
+                        fill: $secondary !important;
+                    }
+                }
+            }
+
+            h2 {
+                position: absolute;
+                top: 3rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        img.spaced-lines {
+            position: absolute;
+            left: 5%;
+            bottom: -5px;
+            opacity: 0.3;
+            width: 75%;
+
+            @include media-breakpoint-up(xxl) {
+                width: auto;
             }
         }
     }

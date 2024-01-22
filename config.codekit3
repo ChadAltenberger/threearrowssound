@@ -130,6 +130,16 @@
       "plM" : 3758088159,
       "prP" : 0
     },
+    "\/src\/assets\/img\/spaced-tas-lines.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/spaced-tas-lines.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
     "\/src\/assets\/img\/tas-about-image.jpg" : {
       "ft" : 16384,
       "iS" : 281876,
@@ -15764,7 +15774,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/tas-lines.png",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 727566090.42440295
+    "lastBuiltDate" : 727625140.51322997
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

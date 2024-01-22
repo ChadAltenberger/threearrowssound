@@ -1,84 +1,98 @@
 export const songs = [
+    // Different Wave - (Wild Season)
     {
-        waveformId: "different-wave",
+        audioId: "different-wave",
         artist: "Wild Season",
         songTitle: "Different Wave",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Mexico - (Wild Season)
     {
-        waveformId: "mexico",
+        audioId: "mexico",
         artist: "Wild Season",
         songTitle: "Mexico",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Leaving Me Soon - (Salt Air)
     {
-        waveformId: "leaving-me-soon",
+        audioId: "leaving-me-soon",
         artist: "Salt Air",
         songTitle: "Leaving Me Soon",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Sweet Little Love - (Salt Air)
     {
-        waveformId: "sweet-little-love",
+        audioId: "sweet-little-love",
         artist: "Salt Air",
         songTitle: "Sweet Little Love",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // The Hills - (Strong Water)
     {
-        waveformId: "the-hills",
+        audioId: "the-hills",
         artist: "Strong Water",
         songTitle: "The Hills",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Bend - (Strong Water)
     {
-        waveformId: "bend",
+        audioId: "bend",
         artist: "Strong Water",
         songTitle: "Bend",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Head in the Clouds - (Yours For Mine)
     {
-        waveformId: "head-in-the-clouds",
+        audioId: "head-in-the-clouds",
         artist: "Yours For Mine",
         songTitle: "Head in the Clouds",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Break the Teeth - (Yours For Mine)
     {
-        waveformId: "break-the-teeth",
+        audioId: "break-the-teeth",
         artist: "Yours For Mine",
         songTitle: "Break the Teeth",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Phantom Seas - (Maple Union)
     {
-        waveformId: "phantom-seas",
+        audioId: "phantom-seas",
         artist: "Maple Union",
         songTitle: "Phantom Seas",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Unwound - (Maple Union)
     {
-        waveformId: "unwound",
+        audioId: "unwound",
         artist: "Maple Union",
         songTitle: "Unwound",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Touch and Go - (Heidi Riddell)
     {
-        waveformId: "touch-and-go",
+        audioId: "touch-and-go",
         artist: "Heidi Riddell",
         songTitle: "Touch and Go",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Settle Down - (Heidi Riddell)
     {
-        waveformId: "settle-down",
+        audioId: "settle-down",
         artist: "Heidi Riddell",
         songTitle: "Settle Down",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Consumed - (Chris Redmon)
     {
-        waveformId: "consumed",
+        audioId: "consumed",
         artist: "Chris Redmon",
         songTitle: "Consumed",
         mp3: "assets/audio/different-wave.mp3",
     },
+    // Trick of the Light - (Delaplane)
     {
-        waveformId: "trick-of-the-light",
+        audioId: "trick-of-the-light",
         artist: "Delaplane",
         songTitle: "Trick of the Light",
         mp3: "assets/audio/different-wave.mp3",

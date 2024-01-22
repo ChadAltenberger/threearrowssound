@@ -20,187 +20,94 @@ export default function indexInit() {
     // getAndSetDistance(line2, line2String, "right");
 
     /* ****************************************************** */
-    /*                        NON ASYNC                       */
+    /*                      AUDIO PLAYERS                     */
     /* ****************************************************** */
-    // document.addEventListener("DOMContentLoaded", async () => {
-    //     const songs = [
-    //         {
-    //             waveformId: "different-wave",
-    //             mp3: "assets/audio/different-wave.mp3",
-    //         },
-    //         {
-    //             waveformId: "mexico",
-    //             mp3: "assets/audio/different-wave.mp3",
-    //         },
-    //         {
-    //             waveformId: "the-hills",
-    //             mp3: "assets/audio/different-wave.mp3",
-    //         },
-    //         {
-    //             waveformId: "bend",
-    //             mp3: "assets/audio/different-wave.mp3",
-    //         },
-    //         // Add more songs as needed
-    //     ];
 
-    //     const playButtons = document.querySelectorAll(".play");
+    // Get the wrapper element
+    const samplesWrapper = document.getElementById("samples-wrapper");
 
-    //     function createWaveSurfer(index, waveFormId, mp3Path) {
-    //         const wavesurfer = WaveSurfer.create({
-    //             container: `#waveform-${waveFormId}`,
-    //             waveColor: "#00abac",
-    //             progressColor: "#00ABAC99",
-    //             responsive: true,
-    //             height: 50,
-    //             backend: "WebAudio",
-    //             plugins: [
-    //                 // Add any necessary plugins
-    //             ],
-    //         });
+    // Store the currently playing audio element
+    let currentAudio = null;
 
-    //         wavesurfer.load(mp3Path);
-
-    //         wavesurfer.on("play", () => {
-    //             showPause(index);
-    //             pauseOtherPlayers(index);
-    //         });
-
-    //         wavesurfer.on("pause", () => {
-    //             showPlay(index);
-    //         });
-
-    //         return wavesurfer;
-    //     }
-
-    //     function showPause(index) {
-    //         playButtons[index].classList.remove("bi-play-circle");
-    //         playButtons[index].classList.add("bi-pause-circle");
-    //     }
-
-    //     function showPlay(index) {
-    //         playButtons[index].classList.remove("bi-pause-circle");
-    //         playButtons[index].classList.add("bi-play-circle");
-    //     }
-
-    //     function pauseOtherPlayers(currentIndex) {
-    //         waveSurfers.forEach((wavesurfer, index) => {
-    //             if (index !== currentIndex && wavesurfer.isPlaying()) {
-    //                 wavesurfer.pause();
-    //                 showPlay(index);
-    //             }
-    //         });
-    //     }
-
-    //     const waveSurfers = [];
-
-    //     // Initialize WaveSurfer instances for each player
-    //     for (let i = 0; i < playButtons.length; i++) {
-    //         const wavesurfer = createWaveSurfer(i, songs[i].waveformId, songs[i].mp3);
-    //         waveSurfers.push(wavesurfer);
-
-    //         // Add click event listener to each play button
-    //         playButtons[i].addEventListener("click", () => {
-    //             // Play/pause the corresponding WaveSurfer instance
-    //             waveSurfers[i].playPause();
-    //         });
-    //     }
-    // });
-
-    /* ****************************************************** */
-    /*                          ASYNC                         */
-    /* ****************************************************** */
-    document.addEventListener("DOMContentLoaded", async () => {
-        const samplesWrapper = document.querySelector("#samples-wrapper");
-
-        // Render HTML for each song
-        songs.forEach((song) => {
-            samplesWrapper.innerHTML += html`
-                <div class="col">
-                    <div class="music p-3 bg-primary">
-                        <p class="song-title text-white mb-0 d-inline">${song.songTitle}</p>
-                        <span class="d-inline text-gray">-</span>
-                        <p class="artist text-gray mb-0 d-inline"><small> ${song.artist}</small></p>
-                        <div class="track d-flex mt-2">
-                            <div class="play bi bi-play-circle d-inline-block text-white fs-2 me-2"></div>
-                            <div id="waveform-${song.waveformId}" class="w-100"></div>
-                        </div>
+    // Loop through the array of songs
+    songs.forEach((song) => {
+        // Create the audio player HTML
+        const audioPlayerHTML = html`
+            <div class="col">
+                <div class="audio-player d-flex align-items-center bg-primary">
+                    <div class="btn-wrapper d-flex justify-content-center align-items-center">
+                        <div class="play-pause-btn bi bi-play-fill d-inline-block text-white fs-2"></div>
                     </div>
+                    <div class="track-info d-flex flex-column justify-content-center">
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-bar"></div>
+                        </div>
+                        <p class="song-title text-white lh-1 mb-0 ms-2">${song.songTitle}</p>
+                        <p class="artist text-gray mb-0 ms-2"><small>${song.artist}</small></p>
+                    </div>
+                    <audio id="${song.audioId}">
+                        <source src="${song.mp3}" type="audio/mp3" />
+                    </audio>
                 </div>
-            `;
-        });
+            </div>
+        `;
 
-        // Assuming you have 8 play buttons with the class ".play"
-        const playButtons = document.querySelectorAll(".play");
-
-        // Function to create a WaveSurfer instance for a given player index
-        function createWaveSurfer(index, waveFormId, mp3Path) {
-            return new Promise((resolve) => {
-                const wavesurfer = WaveSurfer.create({
-                    container: `#waveform-${waveFormId}`,
-                    waveColor: "#00abac",
-                    progressColor: "#00ABAC99",
-                    responsive: true,
-                    height: 45,
-                    url: `${mp3Path}`, // Adjust the naming convention of your audio files
-                    backend: "WebAudio", // Specify the backend to avoid issues with async initialization
-                    plugins: [
-                        // Add any necessary plugins
-                    ],
-                });
-
-                wavesurfer.on("ready", () => {
-                    resolve(wavesurfer);
-                });
-
-                wavesurfer.on("play", () => {
-                    showPause(index);
-                    pauseOtherPlayers(index);
-                });
-
-                wavesurfer.on("pause", () => {
-                    showPlay(index);
-                });
-            });
-        }
-
-        // Function to show pause icon for a specific player
-        function showPause(index) {
-            playButtons[index].classList.remove("bi-play-circle");
-            playButtons[index].classList.add("bi-pause-circle");
-        }
-
-        // Function to show play icon for a specific player
-        function showPlay(index) {
-            playButtons[index].classList.remove("bi-pause-circle");
-            playButtons[index].classList.add("bi-play-circle");
-        }
-
-        // Function to pause other players when a new song starts playing
-        function pauseOtherPlayers(currentIndex) {
-            waveSurfers.forEach((wavesurfer, index) => {
-                if (index !== currentIndex && wavesurfer.isPlaying()) {
-                    wavesurfer.pause();
-                    showPlay(index); // Update the play icon for the paused player
-                }
-            });
-        }
-
-        // Create an array to store WaveSurfer instances
-        const waveSurfers = [];
-
-        // Initialize WaveSurfer instances for each player concurrently
-        const promises = songs.map((song, i) => createWaveSurfer(i, song.waveformId, song.mp3));
-        waveSurfers.push(...(await Promise.all(promises)));
-
-        // Add click event listener to each play button
-        playButtons.forEach((playButton, i) => {
-            playButton.addEventListener("click", () => {
-                // Play/pause the corresponding WaveSurfer instance
-                waveSurfers[i].playPause();
-            });
-        });
+        // Append the audio player to the wrapper
+        samplesWrapper.innerHTML += audioPlayerHTML;
     });
 
-    /* ============= TRIGGER POPUP ON PAGE LOAD ============= */
-    // triggerPopup("#popup");
+    // Add event listeners for each audio player (similar to your existing code)
+    const audioPlayers = document.querySelectorAll(".audio-player");
+
+    audioPlayers.forEach((player) => {
+        const audio = player.querySelector("audio");
+        const btnWrapper = player.querySelector(".btn-wrapper");
+        const playPauseBtn = player.querySelector(".play-pause-btn");
+        const progressBar = player.querySelector(".progress-bar");
+        const progressBarWrapper = player.querySelector(".progress-bar-wrapper");
+
+        btnWrapper.addEventListener("click", togglePlayPause);
+        progressBarWrapper.addEventListener("click", handleProgressBarClick);
+        audio.addEventListener("timeupdate", updateProgressBar);
+
+        function togglePlayPause() {
+            if (audio.paused) {
+                // Pause the previously playing audio (if any)
+                if (currentAudio && currentAudio !== audio) {
+                    currentAudio.pause();
+                    const prevPlayPauseBtn = currentAudio.parentElement.querySelector(".play-pause-btn");
+                    prevPlayPauseBtn.classList.remove("bi-pause");
+                    prevPlayPauseBtn.classList.add("bi-play-fill");
+                }
+
+                // Set the current audio to the current one
+                currentAudio = audio;
+
+                // Play the current audio
+                audio.play();
+                playPauseBtn.classList.remove("bi-play-fill");
+                playPauseBtn.classList.add("bi-pause");
+            } else {
+                audio.pause();
+                playPauseBtn.classList.remove("bi-pause");
+                playPauseBtn.classList.add("bi-play-fill");
+            }
+        }
+
+        function updateProgressBar() {
+            const percentage = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = percentage + "%";
+        }
+
+        function handleProgressBarClick(event) {
+            const clickX = event.offsetX;
+            const progressBarWidth = progressBarWrapper.clientWidth; // Adjusted for border
+            const clickPercentage = (clickX / progressBarWidth) * 100;
+
+            progressBar.style.width = `${clickPercentage}%`;
+
+            const newTime = (clickPercentage / 100) * audio.duration;
+            audio.currentTime = newTime;
+        }
+    });
 }

@@ -1,29 +1,39 @@
 footer {
-    ul.social-links {
-        li {
-            height: 24px;
-            width: 24px;
+    position: relative;
+    height: 20vh;
 
-            margin-left: 20px;
-            display: inline-block;
-
-            &:first-of-type {
-                margin-left: 0px;
-            }
-        }
+    .footer-contents {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-
-    // SAM flag
-    #sam-flag {
+    #footer-logo-wrapper {
         position: relative;
-        top: -2px;
-        margin: 0 2px;
+        outline: 1px solid $white;
+        outline-offset: 22px;
 
-        height: 30px;
-        width: 21px;
+        .footer-top-left {
+            position: absolute;
+            top: -23px;
+            right: calc(100% + 22px);
+            // width: 40rem;
+            height: 1px;
+            background-color: $white;
+            z-index: 0;
+        }
+        .footer-bottom-right {
+            position: absolute;
+            bottom: -23px;
+            left: calc(100% + 22px);
+            // width: 40rem;
+            height: 1px;
+            background-color: $white;
+            z-index: 0;
+        }
 
-        .cls-1 {
-            fill: $secondary;
+        img.footer-logo {
+            width: 8rem;
         }
     }
 }

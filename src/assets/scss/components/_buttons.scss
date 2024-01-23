@@ -1,0 +1,14 @@
+.btn {
+    font-family: $secondary;
+    text-transform: uppercase;
+
+    &-outline-white {
+        border: 2px solid $white;
+        color: $white;
+
+        &:hover {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+}

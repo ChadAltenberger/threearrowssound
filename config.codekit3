@@ -107,6 +107,16 @@
       "oAP" : "\/dist\/assets\/fonts\/bootstrap-icons.woff2",
       "oF" : 0
     },
+    "\/src\/assets\/img\/arrow.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/arrow.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
     "\/src\/assets\/img\/portfolio-bg.jpg" : {
       "ft" : 16384,
       "iS" : 108377,
@@ -163,6 +173,16 @@
       "plM" : 3758088159,
       "prP" : 0
     },
+    "\/src\/assets\/img\/tas-black.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/tas-black.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
     "\/src\/assets\/img\/tas-lines.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -185,6 +205,16 @@
       "ou" : "lpckwebp-default",
       "q" : 80,
       "rq" : 75
+    },
+    "\/src\/assets\/img\/tas-white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/tas-white.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
     },
     "\/src\/assets\/js\/base\/_jquery-global.js" : {
       "bF" : 0,
@@ -15550,6 +15580,21 @@
       "oA" : 2,
       "oAP" : "\/dist\/assets\/scss\/base\/.sass-cache\/3b3fcf5cd718f685ddfc49658f1e15395e49b470\/buttons.scssc-e",
       "oF" : 0
+    },
+    "\/src\/assets\/scss\/components\/_buttons.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 2,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 3,
+      "oA" : 1,
+      "oAP" : "\/dist\/assets\/scss\/css\/_buttons.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 2,
+      "sct" : 0
     },
     "\/src\/assets\/scss\/components\/_eh-elements.scss" : {
       "aP" : 1,

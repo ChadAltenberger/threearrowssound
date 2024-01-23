@@ -15,7 +15,7 @@
 
 /* ======================== BASE ======================== */
 import { utl_setYear, utl_pageId } from "./base/_utilities.js";
-utl_setYear();
+// utl_setYear();
 
 /* ===================== COMPONENTS ===================== */
 // import ehElementsInit from "./components/_eh-elements.js";

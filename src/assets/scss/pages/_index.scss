@@ -66,18 +66,7 @@
                 z-index: 1;
             }
 
-            &::before {
-                position: absolute;
-                content: "";
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: $white;
-                opacity: 0.6;
-                z-index: 1;
-            }
-
+            &::before,
             &::after {
                 position: absolute;
                 content: "";
@@ -85,9 +74,17 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
+                z-index: 1;
+            }
+
+            &::before {
+                background-color: $primary;
+                opacity: 0.65;
+            }
+
+            &::after {
                 outline: 2px solid $white;
                 outline-offset: -4rem;
-                z-index: 1;
             }
 
             video {
@@ -105,13 +102,67 @@
 
     #intro {
         h1.intro-xl {
-            font-size: 12rem;
+            font-size: 4rem;
             line-height: 0.9;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 5rem;
+            }
+
+            @include media-breakpoint-up(md) {
+                font-size: 6rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 7rem;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 8rem;
+            }
+
+            @include media-breakpoint-up(xxl) {
+                font-size: 9rem;
+            }
+
+            @include media-breakpoint-up(xxl2) {
+                font-size: 12rem;
+            }
+
+            @include media-breakpoint-up(xxl4) {
+                font-size: 14rem;
+                letter-spacing: 0.25rem;
+            }
         }
 
         h2.intro-lg {
-            font-size: 8rem;
+            font-size: 3rem;
             line-height: 1;
+
+            @include media-breakpoint-up(sm) {
+                font-size: 4rem;
+            }
+
+            @include media-breakpoint-up(md) {
+                font-size: 5rem;
+            }
+
+            @include media-breakpoint-up(lg) {
+                font-size: 6rem;
+            }
+
+            @include media-breakpoint-up(xl) {
+                font-size: 7rem;
+            }
+
+            @include media-breakpoint-up(xxl2) {
+                font-size: 8rem;
+            }
+
+            @include media-breakpoint-up(xxl4) {
+                font-size: 10rem;
+                letter-spacing: 0.25rem;
+            }
 
             .line-1,
             .line-2 {
@@ -122,23 +173,62 @@
                     content: "";
                     top: 50%;
                     transform: translateY(-50%);
-                    height: 2px;
+                    height: 1.5px;
                     background-color: $secondary;
                     z-index: -1;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: url(../img/arrow.svg);
+                    top: -1.45px;
+                    z-index: 0;
+
+                    @include media-breakpoint-up(sm) {
+                        top: -7.45px;
+                    }
+
+                    @include media-breakpoint-up(md) {
+                        top: -12.65px;
+                    }
+
+                    @include media-breakpoint-up(lg) {
+                        top: -18.95px;
+                    }
+
+                    @include media-breakpoint-up(xl) {
+                        top: -23.95px;
+                    }
+
+                    @include media-breakpoint-up(xxl2) {
+                        top: -30.45px;
+                    }
+
+                    @include media-breakpoint-up(xxl4) {
+                        top: -42px;
+                    }
                 }
             }
 
             .line-1 {
                 &::before {
-                    left: 15%;
-                    width: 85%;
+                    left: 20%;
+                    width: calc(80% + calc(var(--bs-gutter-x) * 0.5));
+                }
+
+                &::after {
+                    left: calc(20% - 20px);
                 }
             }
 
             .line-2 {
                 &::before {
                     left: 10%;
-                    width: 90%;
+                    width: calc(90% + calc(var(--bs-gutter-x) * 0.5));
+                }
+
+                &::after {
+                    left: calc(10% - 19px);
                 }
             }
         }
@@ -149,15 +239,23 @@
             position: relative;
             outline: 2px solid $white;
             outline-offset: -2rem;
-            margin-bottom: 2rem;
 
-            @include media-breakpoint-up(lg) {
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 2rem;
+            }
+
+            @include media-breakpoint-up(xxl2) {
                 margin-bottom: -12rem;
             }
         }
 
         p.h5 {
             letter-spacing: 0.4rem;
+        }
+
+        .btn {
+            padding: 1rem 1.5rem;
+            font-size: 0.85rem;
         }
     }
 
@@ -174,7 +272,7 @@
             height: 100%;
             background: url(../img/portfolio-bg.webp) no-repeat center center / cover;
             filter: grayscale(1);
-            opacity: 0.37;
+            opacity: 0.45;
             z-index: -1;
         }
 

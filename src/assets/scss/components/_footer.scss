@@ -1,39 +1,63 @@
 footer {
     position: relative;
-    height: 20vh;
+    height: 12rem;
 
     .footer-contents {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-    #footer-logo-wrapper {
-        position: relative;
-        outline: 1px solid $white;
-        outline-offset: 22px;
 
-        .footer-top-left {
-            position: absolute;
-            top: -23px;
-            right: calc(100% + 22px);
-            // width: 40rem;
-            height: 1px;
-            background-color: $white;
-            z-index: 0;
-        }
-        .footer-bottom-right {
-            position: absolute;
-            bottom: -23px;
-            left: calc(100% + 22px);
-            // width: 40rem;
-            height: 1px;
-            background-color: $white;
-            z-index: 0;
+        .tagline {
+            @media (max-width: 500px) {
+                font-size: 0.8rem;
+            }
         }
 
-        img.footer-logo {
-            width: 8rem;
+        #footer-logo-wrapper {
+            position: relative;
+            outline: 1px solid $white;
+            outline-offset: 22px;
+
+            .footer-top-left {
+                position: absolute;
+                top: -23px;
+                right: calc(100% + 22px);
+                // width: 40rem;
+                height: 1px;
+                background-color: $white;
+                z-index: 0;
+            }
+            .footer-bottom-right {
+                position: absolute;
+                bottom: -23px;
+                left: calc(100% + 22px);
+                // width: 40rem;
+                height: 1px;
+                background-color: $white;
+                z-index: 0;
+            }
+
+            // @media (max-width: 500px) {
+            //     outline-offset: 19px;
+
+            //     .footer-top-left {
+            //         top: -19px;
+            //         right: calc(100% + 23px);
+            //     }
+            //     .footer-bottom-right {
+            //         bottom: -19px;
+            //         left: calc(100% + 23px);
+            //     }
+            // }
+
+            img.footer-logo {
+                width: 6rem;
+
+                @include media-breakpoint-up(sm) {
+                    width: 8rem;
+                }
+            }
         }
     }
 }

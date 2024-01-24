@@ -7,6 +7,7 @@
 </head>
 
 <body id="<!-- $pageId? -->">
+    <div class="pin-trigger w-100 position-absolute top-100 start-0"></div>
     <!-- @import assets/partials/navigation -->
     <main>
         <!-- *************************************************** -->
@@ -15,6 +16,7 @@
         <section id="index-header" class="p-0">
             <img class="header-logo" src="assets/img/tas-black.svg" alt="Three Arrows Sound Logo">
             <div class="video-wrapper bg-primary">
+                <div class="video-overlay"></div>
                 <video id="header-vid" class="" src="assets/video/header-vid.mp4" type="video/mp4" webkit-playsinline="true" playsinline="true" autoplay loop muted></video>
                 <img class="tas-lines" src="assets/img/tas-lines.svg" alt="Lines">
             </div>
@@ -33,8 +35,8 @@
                     <div class="col">
                         <h1 class="intro-xl text-uppercase">PRO MUSIC<br>PRODUCTION</h1>
                         <h2 class="intro-lg text-uppercase text-end">
-                            <span class="line-1 d-inline-block w-100">FOR INDIE</span><br>
-                            <span class="line-2 d-inline-block w-100">ARTISTS</span>
+                            <span class="sub-line-1 d-inline-block w-100"><span class="sub-text-1 d-block">FOR INDIE</span></span><br>
+                            <span class="sub-line-2 d-inline-block w-100"><span class="sub-text-2 d-block">ARTISTS</span></span>
                         </h2>
                     </div>
                 </div>
@@ -64,13 +66,14 @@
         <!--                      PORTFOLIO                      -->
         <!-- *************************************************** -->
         <section id="portfolio">
-            <div class="container">
+            <img class="portfolio-bg" data-speed="0.05" src="assets/img/portfolio-bg-expanded-2.jpg" alt="">
+            <div class="container test">
                 <div class="row">
                     <div class="col text-center">
                         <h2 class="display-3 text-uppercase">Portfolio</h2>
                     </div>
                 </div>
-                <div id="samples-wrapper" class="row justify-content-center row-cols-1 row-cols-md-2 g-3 mt-4">
+                <div id="samples-wrapper" class="row justify-content-center row-cols-1 row-cols-md-2 g-3 mt-4" data-speed="-.05">
                     <!-- Audio players rendered via js -->
                     <!-- [[src/assets/js/pages/index.js]] -->
                 </div>
@@ -79,7 +82,7 @@
         <!-- *************************************************** -->
         <!--                      SERVICES                       -->
         <!-- *************************************************** -->
-        <section id="services" class="bg-primary">
+        <section id="services" class="bg-primary" data-speed="0.03">
             <div class="container">
                 <div class="row text-white gx-lg-5">
                     <div class="col-lg-4 text-center">

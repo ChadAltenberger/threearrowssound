@@ -1,4 +1,9 @@
 #main-index {
+    .pin-spacer {
+        background-color: magenta;
+        padding: 0 !important;
+        // height: 90vh !important;
+    }
     #index-header {
         position: relative;
         height: 90vh;
@@ -46,12 +51,11 @@
 
         .video-wrapper {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            width: 65vw;
-            height: 60vh;
+            top: 0;
+            left: 0;
+            transform: scale(0.65);
+            width: 100vw;
+            height: 100vh;
             z-index: 1;
 
             outline: 2px solid $primary;
@@ -66,7 +70,17 @@
                 z-index: 1;
             }
 
-            &::before,
+            .video-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $primary;
+                opacity: 0.65;
+                z-index: 1;
+            }
+
             &::after {
                 position: absolute;
                 content: "";
@@ -74,17 +88,9 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                z-index: 1;
-            }
-
-            &::before {
-                background-color: $primary;
-                opacity: 0.65;
-            }
-
-            &::after {
                 outline: 2px solid $white;
                 outline-offset: -4rem;
+                z-index: 1;
             }
 
             video {
@@ -101,9 +107,14 @@
     }
 
     #intro {
+        // PRO MUSIC PRODUCTION
         h1.intro-xl {
-            font-size: 4rem;
+            font-size: 3rem;
             line-height: 0.9;
+
+            @media (min-width: 500px) {
+                font-size: 4rem;
+            }
 
             @include media-breakpoint-up(sm) {
                 font-size: 5rem;
@@ -135,6 +146,7 @@
             }
         }
 
+        // FOR INDIE ARTISTS
         h2.intro-lg {
             font-size: 3rem;
             line-height: 1;
@@ -164,8 +176,8 @@
                 letter-spacing: 0.25rem;
             }
 
-            .line-1,
-            .line-2 {
+            .sub-line-1,
+            .sub-line-2 {
                 position: relative;
 
                 &::before {
@@ -210,7 +222,11 @@
                 }
             }
 
-            .line-1 {
+            .sub-line-1 {
+                .sub-text-1 {
+                    // transform: translateX(-10%);
+                }
+
                 &::before {
                     left: 20%;
                     width: calc(80% + calc(var(--bs-gutter-x) * 0.5));
@@ -221,7 +237,10 @@
                 }
             }
 
-            .line-2 {
+            .sub-line-2 {
+                .sub-text-2 {
+                    // transform: translateX(-20%);
+                }
                 &::before {
                     left: 10%;
                     width: calc(90% + calc(var(--bs-gutter-x) * 0.5));
@@ -261,20 +280,47 @@
 
     #portfolio {
         position: relative;
-        padding-top: 12rem;
+        height: 100rem;
 
-        &::before {
+        @include media-breakpoint-up(md) {
+            height: 65rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 70rem;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            height: 74rem;
+            padding-top: 12rem;
+        }
+
+        .portfolio-bg {
             position: absolute;
-            content: "";
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url(../img/portfolio-bg.webp) no-repeat center center / cover;
+            object-fit: cover;
             filter: grayscale(1);
             opacity: 0.45;
             z-index: -1;
         }
+
+        // &::before {
+        //     position: absolute;
+        //     content: "";
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: url(../img/portfolio-bg.webp) no-repeat center center / cover;
+        //     filter: grayscale(1);
+        //     opacity: 0.45;
+        //     z-index: -1;
+        //     transform-style: preserve-3d;
+        //     transform: translateZ(-10px) scale(2);
+        // }
 
         .audio-player {
             position: relative;
@@ -341,6 +387,7 @@
         z-index: 0;
         overflow-y: hidden;
         padding-bottom: 15rem;
+        margin-top: -10rem;
 
         .service-title {
             svg {

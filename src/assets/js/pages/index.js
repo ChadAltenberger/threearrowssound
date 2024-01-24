@@ -2,7 +2,8 @@ import triggerPopup from "../components/_trigger-popup.js";
 import { html } from "../base/_utilities.js";
 import { songs } from "../components/_song-list.js";
 import getAndSetDistance from "../components/_set-line-width.js";
-import WaveSurfer from "wavesurfer.js";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function indexInit() {
     /* =================== SET LINE WIDTHS ================== */
@@ -128,4 +129,95 @@ export default function indexInit() {
             audio.currentTime = newTime;
         }
     });
+
+    // Your GSAP animations
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".video-wrapper", {
+        y: "-90vh",
+        scrollTrigger: {
+            trigger: ".pin-trigger",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+            pin: "#index-header",
+        },
+    });
+
+    // // Single timeline for both animations
+    // const tl = gsap.timeline({ ease: "power1.inOut" });
+
+    // ScrollTrigger.defaults({
+    //     scrub: true,
+    // });
+
+    // // Chain animations together directly
+    // tl.from(".video-wrapper", {
+    //     transform: "scale(1)",
+    //     duration: 2,
+    //     delay: 2,
+    // })
+    //     .from(
+    //         ".tas-lines",
+    //         {
+    //             opacity: 0,
+    //             duration: 1.25,
+    //         },
+    //         "-=3.25"
+    //     )
+    //     .from(
+    //         ".video-overlay",
+    //         {
+    //             opacity: 1,
+    //             duration: 2,
+    //         },
+    //         "-=2"
+    //     )
+    //     .from(".arrows-wrapper", {
+    //         opacity: 0,
+    //         duration: 2,
+    //     })
+    //     .from(
+    //         ".header-logo",
+    //         {
+    //             opacity: 0,
+    //             duration: 2,
+    //         },
+    //         "-=2"
+    //     )
+    //     .from(".sub-text-1", {
+    //         x: "-18%",
+    //         scrollTrigger: {
+    //             trigger: ".sub-text-1",
+    //             start: "top bottom",
+    //             end: "bottom center",
+    //         },
+    //     })
+    //     .from(".sub-text-2", {
+    //         x: "-20%",
+    //         scrollTrigger: {
+    //             trigger: ".sub-text-2",
+    //             start: "top bottom",
+    //             end: "bottom center",
+    //         },
+    //     })
+    //     .to(".portfolio-bg", {
+    //         y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+    //         ease: "none",
+    //         scrollTrigger: {
+    //             trigger: "#portfolio",
+    //             start: "top bottom",
+    //             end: "bottom top",
+    //             scrub: true,
+    //         },
+    //     })
+    //     .to("#services", {
+    //         marginTop: "-18rem",
+    //         scrollTrigger: {
+    //             trigger: "#services",
+    //             start: "top bottom",
+    //             end: "bottom top",
+    //             scrub: true,
+    //         },
+    //     });
 }

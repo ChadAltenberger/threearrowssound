@@ -1,8 +1,7 @@
 #main-index {
     .pin-spacer {
-        background-color: magenta;
-        padding: 0 !important;
-        // height: 90vh !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     #index-header {
         position: relative;
@@ -29,7 +28,7 @@
                 position: absolute;
                 top: -27px;
                 right: calc(100% + 24px);
-                // width: 40rem;
+                width: 100vw;
                 height: 3px;
                 background-color: $primary;
                 z-index: 0;
@@ -38,7 +37,7 @@
                 position: absolute;
                 bottom: -27px;
                 left: calc(100% + 24px);
-                // width: 40rem;
+                width: 100vw;
                 height: 3px;
                 background-color: $primary;
                 z-index: 0;
@@ -254,7 +253,7 @@
     }
 
     #about {
-        .img-wrapper {
+        .about-img-wrapper {
             position: relative;
             outline: 2px solid $white;
             outline-offset: -2rem;

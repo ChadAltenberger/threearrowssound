@@ -7,7 +7,7 @@
 
 // Use following imports only where needed (not globally)
 // Bootstrap modules (add as needed)
-// import "bootstrap/js/dist/collapse";
+import "bootstrap/js/dist/offcanvas";
 
 // Glidejs
 // import Glide from "@glidejs/glide";

@@ -7,7 +7,7 @@
 
 // Use following imports only where needed (not globally)
 // Bootstrap modules (add as needed)
-import "bootstrap/js/dist/offcanvas";
+import "bootstrap/js/dist/scrollspy";
 
 // Glidejs
 // import Glide from "@glidejs/glide";
@@ -23,6 +23,9 @@ import { utl_setYear, utl_pageId } from "./base/_utilities.js";
 
 // import stickySideInit from "./components/_sticky-sides.js";
 // stickySideInit();
+
+import navbarInit from "./components/_navbar.js";
+navbarInit();
 
 /* ======================== PAGES ======================= */
 import indexInit from "./pages/index.js";

@@ -117,6 +117,87 @@
       "plM" : 3758088159,
       "prP" : 0
     },
+    "\/src\/assets\/img\/icons\/favicon\/android-chrome-192x192.png" : {
+      "ft" : 32768,
+      "iS" : 3665,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/android-chrome-192x192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/img\/icons\/favicon\/android-chrome-512x512.png" : {
+      "ft" : 32768,
+      "iS" : 17618,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/android-chrome-512x512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/img\/icons\/favicon\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 3356,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/img\/icons\/favicon\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 299,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/img\/icons\/favicon\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 414,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/img\/icons\/favicon\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/favicon.ico",
+      "oF" : 0
+    },
+    "\/src\/assets\/img\/icons\/favicon\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/site.webmanifest",
+      "oF" : 0
+    },
     "\/src\/assets\/img\/portfolio-bg-expanded-2.jpg" : {
       "ft" : 16384,
       "iS" : 505194,
@@ -321,6 +402,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/dist\/assets\/js\/js\/_eh-elements.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
+    "\/src\/assets\/js\/components\/_navbar.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/dist\/assets\/js\/js\/_navbar.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -15903,7 +15995,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/tas-lines.png",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 727625140.51322997
+    "lastBuiltDate" : 728081624.58711505
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

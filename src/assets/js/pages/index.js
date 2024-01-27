@@ -6,6 +6,26 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function indexInit() {
+    if (performance.navigation.type === 1) {
+        // Page is being refreshed, scroll to the top
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
+    }
+
+    // Function to check if the user is using Chrome on iOS or Safari on iOS
+    function isIOSChromeOrSafari() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return /(iphone|ipod|ipad).*chrome/.test(userAgent) || /iphone|ipod|ipad.*applewebkit.*(safari)/.test(userAgent);
+    }
+
+    // Check if the user is on Chrome on iOS or Safari on iOS
+    if (isIOSChromeOrSafari()) {
+        // Disable animations or apply a specific style for these browsers
+        // For example, you can add a class to the body to disable animations
+        document.body.classList.add("disable-animations");
+    }
+
     /* =================== SET LINE WIDTHS ================== */
     const footerLogoWrapper = document.querySelector("#footer-logo-wrapper");
     const footerLineLeft = document.querySelector(".footer-top-left");
@@ -156,9 +176,21 @@ export default function indexInit() {
                 duration: 2,
             },
             "-=2"
-        )
-        // Pin scrolling of video
-        .to(".video-wrapper", {
+        );
+    // Pin scrolling of video
+    // .to(".video-wrapper", {
+    //     y: "-84vh",
+    //     scrollTrigger: {
+    //         trigger: ".pin-trigger",
+    //         start: "top bottom",
+    //         end: "bottom top",
+    //         scrub: true,
+    //         pin: ".pin-wrapper",
+    //     },
+    // })
+    if (!isIOSChromeOrSafari()) {
+        // Only include the following animation if not on Chrome on iOS or Safari on iOS
+        tl.to(".video-wrapper", {
             y: "-84vh",
             scrollTrigger: {
                 trigger: ".pin-trigger",
@@ -167,33 +199,62 @@ export default function indexInit() {
                 scrub: true,
                 pin: ".pin-wrapper",
             },
-        })
-        // Bring in navbar
-        .to("#main-nav", {
-            marginTop: "0",
-            scrollTrigger: {
-                trigger: "#intro",
-                start: "150% bottom",
-                end: "bottom -20%",
-                // markers: true,
-            },
-        })
+        });
+    }
+    // Bring in navbar
+    tl.to("#main-nav", {
+        marginTop: 0,
+        scrollTrigger: {
+            trigger: "#intro",
+            start: "150% bottom",
+            end: "bottom -20%",
+            // markers: true,
+        },
+    })
         // Sub heading slide to right
-        .from(".sub-text-1", {
-            x: "-25%",
+        .to(".sub-text-1", {
+            x: 0,
             scrollTrigger: {
                 trigger: "#intro",
-                start: "180% bottom",
-                end: "bottom -20%",
+                start: () => {
+                    // Use conditions to calculate the start value based on window.innerWidth
+                    if (isIOSChromeOrSafari()) {
+                        return "-25% center";
+                    } else {
+                        return "180% bottom";
+                    }
+                },
+                end: () => {
+                    // Use conditions to calculate the start value based on window.innerWidth
+                    if (isIOSChromeOrSafari()) {
+                        return "bottom center";
+                    } else {
+                        return "bottom -20%";
+                    }
+                },
                 // markers: true,
             },
         })
-        .from(".sub-text-2", {
-            x: "-29%",
+        .to(".sub-text-2", {
+            x: 0,
             scrollTrigger: {
                 trigger: "#intro",
-                start: "190% bottom",
-                end: "bottom -30%",
+                start: () => {
+                    // Use conditions to calculate the start value based on window.innerWidth
+                    if (isIOSChromeOrSafari()) {
+                        return "-25% center";
+                    } else {
+                        return "190% bottom";
+                    }
+                },
+                end: () => {
+                    // Use conditions to calculate the start value based on window.innerWidth
+                    if (isIOSChromeOrSafari()) {
+                        return "bottom center";
+                    } else {
+                        return "bottom -30%";
+                    }
+                },
                 // markers: true,
             },
         })

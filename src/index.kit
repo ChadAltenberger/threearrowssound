@@ -87,21 +87,21 @@
         <section id="services" class="bg-primary" data-speed="0.03">
             <div class="container">
                 <div class="row text-white gx-lg-5">
-                    <div class="col-lg-4 text-center">
+                    <div id="trigger" class="col-lg-4 text-center mb-4 mb-lg-0">
                         <div class="service-title recording position-relative">
                             <!-- @import assets/partials/arrow -->
                             <h2 class="h1 text-white text-uppercase">Recording</h2>
                             <p class="px-xxl2-5 mt-4">Whether for backing tracks or full band production, I have decades of experience and gear to help craft your songs and capture your sound</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 text-center">
+                    <div class="col-lg-4 text-center mb-4 mb-lg-0">
                         <div class="service-title mixing position-relative">
                             <!-- @import assets/partials/arrow -->
                             <h2 class="h1 text-white text-uppercase">Mixing</h2>
                             <p class="px-xxl2-5 mt-4">Send your raw tracks, no matter where they were recorded, and get professional, high-end mixes that rival major commercial releases</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 text-center">
+                    <div id="spaced-lines-trigger" class="col-lg-4 text-center">
                         <div class="service-title mastering position-relative">
                             <!-- @import assets/partials/arrow -->
                             <h2 class="h1 text-white text-uppercase">Mastering</h2>
@@ -110,7 +110,14 @@
                     </div>
                 </div>
             </div>
-            <img class="spaced-lines" src="assets/img/spaced-tas-lines.svg" alt="lines">
+            <div class="spaced-lines">
+                <img class="spaced-line-1" src="assets/img/spaced-lines/line-1.svg" alt="">
+                <img class="spaced-line-2" src="assets/img/spaced-lines/line-2.svg" alt="">
+                <img class="spaced-line-3" src="assets/img/spaced-lines/line-3.svg" alt="">
+                <img class="spaced-line-4" src="assets/img/spaced-lines/line-4.svg" alt="">
+                <img class="spaced-line-5" src="assets/img/spaced-lines/line-5.svg" alt="">
+            </div>
+            <!-- <img class="spaced-lines" src="assets/img/spaced-tas-lines.svg" alt="lines"> -->
         </section>
         <!-- *************************************************** -->
         <!--                    CONTACT FORM                     -->
@@ -123,30 +130,26 @@
                         <p class="lead">Please complete the form below to request a quote or for general inquiries</p>
                     </div>
                     <div class="col-lg-8 mt-5">
-                        <form>
+                        <form id="contact-form" action="https://formsubmit.co/9bfc5db7d1f6cee4e7cc8fdc6bb08b07" method="POST">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <!-- <input type="text" name="_honey" style="display:none"> -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label class="form-label font-secondary text-uppercase" for="first-name">First Name <span class="text-secondary">*</span></label>
-                                        <input id="first-name" class="form-control border-primary" type="text" aria-label="Field to enter first name" required>
+                                        <label class="form-label font-secondary text-uppercase" for="first-name">Name <span class="text-secondary">*</span></label>
+                                        <input id="first-name" class="form-control border-primary" type="text" name="Name" aria-label="Field to enter first name" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label class="form-label font-secondary text-uppercase" for="last-name">Last Name <span class="text-secondary">*</span></label>
-                                        <input id="last-name" class="form-control border-primary" type="text" aria-label="Field to enter last name">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="mb-3">
                                         <label class="form-label font-secondary text-uppercase" for="email">Email <span class="text-secondary">*</span></label>
-                                        <input id="email" class="form-control border-primary" type="email" aria-label="Field to enter email" required>
+                                        <input id="email" class="form-control border-primary" type="email" name="Email" aria-label="Field to enter email" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label class="form-label font-secondary text-uppercase" for="subject">Subject <span class="text-secondary">*</span></label>
-                                        <input id="subject" class="form-control border-primary" type="text" aria-label="Field to enter subject" required>
+                                        <input id="subject" class="form-control border-primary" type="text" name="Subject" aria-label="Field to enter subject" required>
                                     </div>
                                 </div>
                                 <div class="col-12">

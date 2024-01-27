@@ -180,7 +180,7 @@ export default function indexInit() {
         })
         // Sub heading slide to right
         .from(".sub-text-1", {
-            x: "-20%",
+            x: "-25%",
             scrollTrigger: {
                 trigger: "#intro",
                 start: "180% bottom",
@@ -189,7 +189,7 @@ export default function indexInit() {
             },
         })
         .from(".sub-text-2", {
-            x: "-24%",
+            x: "-29%",
             scrollTrigger: {
                 trigger: "#intro",
                 start: "190% bottom",
@@ -214,7 +214,6 @@ export default function indexInit() {
                 trigger: "#portfolio",
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
             },
         })
         .to("#services", {
@@ -223,16 +222,15 @@ export default function indexInit() {
                 trigger: "#services",
                 start: "top bottom",
                 end: "bottom top",
-                scrub: true,
             },
         })
         // Lines on bottom of Services
-        .from(".spaced-lines", {
-            bottom: "-100%",
+        .to(".spaced-lines", {
             scrollTrigger: {
-                trigger: "#services",
-                start: "30% bottom",
-                end: "bottom 90%",
+                trigger: "#spaced-lines-trigger",
+                toggleClass: { targets: ".spaced-lines", className: "animated" },
+                scrub: false,
+                once: true,
                 // markers: true,
             },
         });

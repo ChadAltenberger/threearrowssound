@@ -166,6 +166,56 @@
       "plM" : 3758088159,
       "prP" : 0
     },
+    "\/src\/assets\/img\/spaced-lines\/line-1.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-1.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/img\/spaced-lines\/line-2.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-2.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/img\/spaced-lines\/line-3.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-3.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/img\/spaced-lines\/line-4.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-4.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/img\/spaced-lines\/line-5.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-5.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
     "\/src\/assets\/img\/spaced-tas-lines.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -15817,6 +15867,14 @@
       "hM" : 1,
       "oA" : 0,
       "oAP" : "\/dist\/style-guide.html",
+      "oF" : 0
+    },
+    "\/src\/thank-you.kit" : {
+      "cB" : 1,
+      "ft" : 2048,
+      "hM" : 1,
+      "oA" : 0,
+      "oAP" : "\/dist\/thank-you.html",
       "oF" : 0
     },
     "\/tas-lines.png" : {

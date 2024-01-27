@@ -35,7 +35,7 @@
             }
             .bottom-right {
                 position: absolute;
-                bottom: -27px;
+                bottom: -26.615px;
                 left: calc(100% + 24px);
                 width: 100vw;
                 height: 3px;
@@ -279,7 +279,7 @@
 
     #portfolio {
         position: relative;
-        height: 100rem;
+        height: 102rem;
 
         @include media-breakpoint-up(md) {
             height: 65rem;
@@ -305,21 +305,6 @@
             opacity: 0.45;
             z-index: -1;
         }
-
-        // &::before {
-        //     position: absolute;
-        //     content: "";
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: url(../img/portfolio-bg.webp) no-repeat center center / cover;
-        //     filter: grayscale(1);
-        //     opacity: 0.45;
-        //     z-index: -1;
-        //     transform-style: preserve-3d;
-        //     transform: translateZ(-10px) scale(2);
-        // }
 
         .audio-player {
             position: relative;
@@ -386,7 +371,15 @@
         z-index: 0;
         overflow-y: hidden;
         padding-bottom: 15rem;
-        margin-top: -10rem;
+        margin-top: -15rem;
+
+        @include media-breakpoint-up(md) {
+            margin-top: -12rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-top: -10rem;
+        }
 
         .service-title {
             svg {
@@ -410,15 +403,55 @@
             }
         }
 
-        img.spaced-lines {
+        .spaced-lines-trigger {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1rem;
+        }
+
+        .spaced-lines {
             position: absolute;
             left: 5%;
             bottom: -5px;
             opacity: 0.3;
             width: 75%;
 
-            @include media-breakpoint-up(xxl) {
-                width: auto;
+            // @include media-breakpoint-up(xxl) {
+            //     width: auto;
+            // }
+
+            img {
+                position: absolute;
+                bottom: 0;
+                margin-bottom: -100%;
+                transition: margin-bottom 1s;
+
+                &.spaced-line-1 {
+                    left: 0;
+                }
+                &.spaced-line-2 {
+                    left: 20%;
+                    transition-delay: 0.1s;
+                }
+                &.spaced-line-3 {
+                    left: 40%;
+                    transition-delay: 0.2s;
+                }
+                &.spaced-line-4 {
+                    left: 60%;
+                    transition-delay: 0.3s;
+                }
+                &.spaced-line-5 {
+                    left: 80%;
+                    transition-delay: 0.4s;
+                }
+            }
+
+            &.animated {
+                img {
+                    margin-bottom: 0;
+                }
             }
         }
     }

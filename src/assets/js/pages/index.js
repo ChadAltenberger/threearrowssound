@@ -1,5 +1,5 @@
 import triggerPopup from "../components/_trigger-popup.js";
-import { html } from "../base/_utilities.js";
+import { html, utl_scrollSpyOffset } from "../base/_utilities.js";
 import { songs } from "../components/_song-list.js";
 import getAndSetDistance from "../components/_set-line-width.js";
 import { gsap } from "gsap";
@@ -142,6 +142,20 @@ export default function indexInit() {
         scrub: true,
     });
 
+    // Pin scrolling of video
+    if (!isIOSChromeOrSafari()) {
+        // Only include the following animation if not on Chrome on iOS or Safari on iOS
+        tl.to(".video-wrapper", {
+            y: "-84vh",
+            scrollTrigger: {
+                trigger: ".pin-trigger",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+                pin: ".pin-wrapper",
+            },
+        });
+    }
     // Initial video animation
     tl.from(".video-wrapper", {
         transform: "scale(1)",
@@ -176,41 +190,18 @@ export default function indexInit() {
                 duration: 2,
             },
             "-=2"
-        );
-    // Pin scrolling of video
-    // .to(".video-wrapper", {
-    //     y: "-84vh",
-    //     scrollTrigger: {
-    //         trigger: ".pin-trigger",
-    //         start: "top bottom",
-    //         end: "bottom top",
-    //         scrub: true,
-    //         pin: ".pin-wrapper",
-    //     },
-    // })
-    if (!isIOSChromeOrSafari()) {
-        // Only include the following animation if not on Chrome on iOS or Safari on iOS
-        tl.to(".video-wrapper", {
-            y: "-84vh",
+        )
+
+        // Bring in navbar
+        .to("#main-nav", {
+            marginTop: 0,
             scrollTrigger: {
-                trigger: ".pin-trigger",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-                pin: ".pin-wrapper",
+                trigger: "#intro",
+                start: "150% bottom",
+                end: "bottom -20%",
+                // markers: true,
             },
-        });
-    }
-    // Bring in navbar
-    tl.to("#main-nav", {
-        marginTop: 0,
-        scrollTrigger: {
-            trigger: "#intro",
-            start: "150% bottom",
-            end: "bottom -20%",
-            // markers: true,
-        },
-    })
+        })
         // Sub heading slide to right
         .to(".sub-text-1", {
             x: 0,
@@ -300,8 +291,11 @@ export default function indexInit() {
         if (window.innerWidth !== oldWidth) {
             getAndSetDistance(footerLogoWrapper, footerLineLeft, "left");
             getAndSetDistance(footerLogoWrapper, footerLineRight, "right");
+            utl_scrollSpyOffset();
 
             oldWidth = window.innerWidth;
         }
     });
+
+    utl_scrollSpyOffset();
 }

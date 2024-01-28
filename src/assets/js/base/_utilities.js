@@ -12,5 +12,27 @@ const utl_parseData = (data) => {
     });
 };
 const html = String.raw;
+function utl_scrollSpyOffset() {
+    const link = document.querySelector(".scrollspy-offset");
 
-export { utl_pageId, utl_setYear, utl_parseData, html };
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Get anchor section's hash(id) value
+
+        // Get anchor section's vertical offset from top of the document
+        const targetOffsetTop = document.querySelector("#services").offsetTop;
+
+        if (window.innerWidth >= 992) {
+            // Scroll to calculated target offset from top of document, minus navbar height
+            window.scrollTo({
+                top: targetOffsetTop - 250,
+            });
+        } else {
+            window.scrollTo({
+                top: targetOffsetTop - 140,
+            });
+        }
+    });
+}
+
+export { utl_pageId, utl_setYear, utl_parseData, html, utl_scrollSpyOffset };

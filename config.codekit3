@@ -23,12 +23,6 @@
       "oAP" : "\/dist\/.vscode",
       "oF" : 0
     },
-    "\/dist" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/dist\/dist",
-      "oF" : 0
-    },
     "\/icon.png" : {
       "ft" : 32768,
       "iS" : 33114,
@@ -15995,7 +15989,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/tas-lines.png",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 728081624.58711505
+    "lastBuiltDate" : 728172436.06805301
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

@@ -6,26 +6,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function indexInit() {
-    if (performance.navigation.type === 1) {
-        // Page is being refreshed, scroll to the top
-        window.onload = function () {
-            window.scrollTo(0, 0);
-        };
-    }
-
-    // Function to check if the user is using Chrome on iOS or Safari on iOS
-    function isIOSChromeOrSafari() {
-        const userAgent = navigator.userAgent.toLowerCase();
-        return /(iphone|ipod|ipad).*chrome/.test(userAgent) || /iphone|ipod|ipad.*applewebkit.*(safari)/.test(userAgent);
-    }
-
-    // Check if the user is on Chrome on iOS or Safari on iOS
-    if (isIOSChromeOrSafari()) {
-        // Disable animations or apply a specific style for these browsers
-        // For example, you can add a class to the body to disable animations
-        document.body.classList.add("disable-animations");
-    }
-
     /* =================== SET LINE WIDTHS ================== */
     const footerLogoWrapper = document.querySelector("#footer-logo-wrapper");
     const footerLineLeft = document.querySelector(".footer-top-left");
@@ -132,160 +112,148 @@ export default function indexInit() {
         }
     });
 
-    // Your GSAP animations
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Single timeline for both animations
-    const tl = gsap.timeline({ ease: "power1.inOut" });
-
-    ScrollTrigger.defaults({
-        scrub: true,
-    });
-
-    // Pin scrolling of video
-    if (!isIOSChromeOrSafari()) {
-        // Only include the following animation if not on Chrome on iOS or Safari on iOS
-        tl.to(".video-wrapper", {
-            y: "-84vh",
-            scrollTrigger: {
-                trigger: ".pin-trigger",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-                pin: ".pin-wrapper",
-            },
-        });
+    /* ****************************************************** */
+    /*                       ANIMATIONS                       */
+    /* ****************************************************** */
+    // Function to check if the user is using Chrome on iOS or Safari on iOS
+    function isIOSChromeOrSafari() {
+        const userAgent = navigator.userAgent.toLowerCase();
+        return /(iphone|ipod|ipad).*chrome/.test(userAgent) || /iphone|ipod|ipad.*applewebkit.*(safari)/.test(userAgent);
     }
-    // Initial video animation
-    tl.from(".video-wrapper", {
-        transform: "scale(1)",
-        duration: 2,
-        delay: 2,
-    })
-        // Fade in header elements
-        .from(
-            ".tas-lines",
-            {
-                opacity: 0,
-                duration: 1.25,
-            },
-            "-=3.25"
-        )
-        .from(
-            ".video-overlay",
-            {
-                opacity: 1,
-                duration: 2,
-            },
-            "-=2"
-        )
-        .from(".arrows-wrapper", {
-            opacity: 0,
-            duration: 2,
-        })
-        .from(
-            ".header-logo",
-            {
-                opacity: 0,
-                duration: 2,
-            },
-            "-=2"
-        )
 
-        // Bring in navbar
-        .to("#main-nav", {
-            marginTop: 0,
-            scrollTrigger: {
-                trigger: "#intro",
-                start: "150% bottom",
-                end: "bottom -20%",
-                // markers: true,
-            },
-        })
-        // Sub heading slide to right
-        .to(".sub-text-1", {
-            x: 0,
-            scrollTrigger: {
-                trigger: "#intro",
-                start: () => {
-                    // Use conditions to calculate the start value based on window.innerWidth
-                    if (isIOSChromeOrSafari()) {
-                        return "-25% center";
-                    } else {
-                        return "180% bottom";
-                    }
-                },
-                end: () => {
-                    // Use conditions to calculate the start value based on window.innerWidth
-                    if (isIOSChromeOrSafari()) {
-                        return "bottom center";
-                    } else {
-                        return "bottom -20%";
-                    }
-                },
-                // markers: true,
-            },
-        })
-        .to(".sub-text-2", {
-            x: 0,
-            scrollTrigger: {
-                trigger: "#intro",
-                start: () => {
-                    // Use conditions to calculate the start value based on window.innerWidth
-                    if (isIOSChromeOrSafari()) {
-                        return "-25% center";
-                    } else {
-                        return "190% bottom";
-                    }
-                },
-                end: () => {
-                    // Use conditions to calculate the start value based on window.innerWidth
-                    if (isIOSChromeOrSafari()) {
-                        return "bottom center";
-                    } else {
-                        return "bottom -30%";
-                    }
-                },
-                // markers: true,
-            },
-        })
-        // Move down About image
-        .from(".about-img-wrapper", {
-            marginBottom: 0,
-            scrollTrigger: {
-                trigger: "#about",
-                start: "top bottom",
-                end: "bottom top",
-            },
-        })
-        // Parallax section
-        .to(".portfolio-bg", {
-            y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#portfolio",
-                start: "top bottom",
-                end: "bottom top",
-            },
-        })
-        .to("#services", {
-            marginTop: "-18rem",
-            scrollTrigger: {
-                trigger: "#services",
-                start: "top bottom",
-                end: "bottom top",
-            },
-        })
-        // Lines on bottom of Services
-        .to(".spaced-lines", {
-            scrollTrigger: {
-                trigger: "#spaced-lines-trigger",
-                toggleClass: { targets: ".spaced-lines", className: "animated" },
-                scrub: false,
-                once: true,
-                // markers: true,
-            },
+    window.addEventListener("DOMContentLoaded", () => {
+        const introHeight = document.querySelector("#intro").scrollHeight;
+
+        // Your GSAP animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Single timeline for both animations
+        const tl = gsap.timeline({ ease: "power1.inOut" });
+
+        ScrollTrigger.defaults({
+            scrub: true,
         });
+
+        if (window.scrollY < 1) {
+            // Initial video animation
+            tl.from(".video-wrapper", {
+                transform: "scale(1)",
+                duration: 2,
+                delay: 2,
+            })
+                // Fade in header elements
+                .from(
+                    ".tas-lines",
+                    {
+                        opacity: 0,
+                        duration: 1.25,
+                    },
+                    "-=3.25"
+                )
+                .from(
+                    ".video-overlay",
+                    {
+                        opacity: 1,
+                        duration: 2,
+                    },
+                    "-=2"
+                )
+                .from(".arrows-wrapper", {
+                    opacity: 0,
+                    duration: 2,
+                })
+                .from(
+                    ".header-logo",
+                    {
+                        opacity: 0,
+                        duration: 2,
+                    },
+                    "-=2"
+                );
+        }
+
+        // // Pin scrolling of video
+        if (!isIOSChromeOrSafari()) {
+            // Only include the following animation if not on Chrome on iOS or Safari on iOS
+            gsap.to(".video-wrapper", {
+                y: `-907px`,
+                scrollTrigger: {
+                    trigger: ".pin-trigger",
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true,
+                    pin: ".pin-wrapper",
+                },
+            });
+        }
+        tl
+            // Bring in navbar
+            .to("#main-nav", {
+                marginTop: 0,
+                scrollTrigger: {
+                    trigger: "#about",
+                    start: `-${introHeight} bottom`,
+                    end: "top center",
+                    // markers: true,
+                },
+            })
+            // Sub heading slide to right
+            .to(".sub-text-1", {
+                x: 0,
+                scrollTrigger: {
+                    trigger: "#about",
+                    start: `-${introHeight} bottom`,
+                    end: "top center",
+                    // markers: true,
+                },
+            })
+            .to(".sub-text-2", {
+                x: 0,
+                scrollTrigger: {
+                    trigger: "#about",
+                    start: `-${introHeight + 200} bottom`,
+                    end: "top center",
+                    // markers: true,
+                },
+            })
+            // Move down About image
+            .from(".about-img-wrapper", {
+                marginBottom: 0,
+                scrollTrigger: {
+                    trigger: "#about",
+                    start: "top bottom",
+                    end: "bottom top",
+                },
+            })
+            // Parallax section
+            .to(".portfolio-bg", {
+                y: (i, target) => -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#portfolio",
+                    start: "top bottom",
+                    end: "bottom top",
+                },
+            })
+            .to("#services", {
+                marginTop: "-18rem",
+                scrollTrigger: {
+                    trigger: "#services",
+                    start: "top bottom",
+                    end: "bottom top",
+                },
+            })
+            // Lines on bottom of Services
+            .to(".spaced-lines", {
+                scrollTrigger: {
+                    trigger: "#spaced-lines-trigger",
+                    toggleClass: { targets: ".spaced-lines", className: "animated" },
+                    scrub: false,
+                    once: true,
+                    // markers: true,
+                },
+            });
+    });
 
     window.addEventListener("resize", () => {
         if (window.innerWidth !== oldWidth) {

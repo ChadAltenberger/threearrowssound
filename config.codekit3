@@ -23,6 +23,12 @@
       "oAP" : "\/dist\/.vscode",
       "oF" : 0
     },
+    "\/dist" : {
+      "ft" : 65536,
+      "oA" : 1,
+      "oAP" : "\/dist\/dist",
+      "oF" : 0
+    },
     "\/icon.png" : {
       "ft" : 32768,
       "iS" : 33114,

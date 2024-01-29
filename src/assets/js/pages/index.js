@@ -121,6 +121,12 @@ export default function indexInit() {
         return /(iphone|ipod|ipad).*chrome/.test(userAgent) || /iphone|ipod|ipad.*applewebkit.*(safari)/.test(userAgent);
     }
 
+    function updateScrollY() {
+        window.addEventListener("resize", () => {
+            return "-84vh";
+        });
+    }
+
     window.addEventListener("DOMContentLoaded", () => {
         const introHeight = document.querySelector("#intro").scrollHeight;
 
@@ -172,11 +178,11 @@ export default function indexInit() {
                 );
         }
 
-        // // Pin scrolling of video
+        // Only include the following animation if not on Chrome on iOS or Safari on iOS
         if (!isIOSChromeOrSafari()) {
-            // Only include the following animation if not on Chrome on iOS or Safari on iOS
+            // // Pin scrolling of video
             gsap.to(".video-wrapper", {
-                y: `-907px`,
+                y: "-84vh",
                 scrollTrigger: {
                     trigger: ".pin-trigger",
                     start: "top bottom",
@@ -192,7 +198,7 @@ export default function indexInit() {
                 marginTop: 0,
                 scrollTrigger: {
                     trigger: "#about",
-                    start: `-${introHeight} bottom`,
+                    start: `-${introHeight - 100} bottom`,
                     end: "top center",
                     // markers: true,
                 },

@@ -23,18 +23,11 @@
       "oAP" : "\/dist\/.vscode",
       "oF" : 0
     },
-    "\/icon.png" : {
-      "ft" : 32768,
-      "iS" : 33114,
+    "\/dist" : {
+      "ft" : 65536,
       "oA" : 1,
-      "oAP" : "\/dist\/icon.png",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
+      "oAP" : "\/dist\/dist",
+      "oF" : 0
     },
     "\/node_modules" : {
       "ft" : 65536,

@@ -9,9 +9,9 @@
 // Bootstrap modules (add as needed)
 import "bootstrap/js/dist/scrollspy";
 
-// Glidejs
-// import Glide from "@glidejs/glide";
-// window.Glide = Glide;
+// AOS
+import AOS from "aos";
+AOS.init();
 
 /* ======================== BASE ======================== */
 import { utl_setYear, utl_pageId } from "./base/_utilities.js";

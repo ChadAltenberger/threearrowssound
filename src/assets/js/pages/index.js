@@ -121,11 +121,9 @@ export default function indexInit() {
         return /(iphone|ipod|ipad).*chrome/.test(userAgent) || /iphone|ipod|ipad.*applewebkit.*(safari)/.test(userAgent);
     }
 
-    function updateScrollY() {
-        window.addEventListener("resize", () => {
-            return "-84vh";
-        });
-    }
+    let responsiveValue;
+
+    // window.innerWidth >= 992 ? (responsiveValue = 0) : (responsiveValue = "2rem");
 
     window.addEventListener("DOMContentLoaded", () => {
         const introHeight = document.querySelector("#intro").scrollHeight;
@@ -192,6 +190,7 @@ export default function indexInit() {
                 },
             });
         }
+
         tl
             // Bring in navbar
             .to("#main-nav", {

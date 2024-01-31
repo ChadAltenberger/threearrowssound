@@ -14,9 +14,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.9.1",
-    "gsap": "^3.12.5",
-    "rellax": "^1.12.1",
-    "wavesurfer.js": "^7.6.5"
+    "gsap": "^3.12.5"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"

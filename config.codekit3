@@ -23,12 +23,6 @@
       "oAP" : "\/dist\/.vscode",
       "oF" : 0
     },
-    "\/dist" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/dist\/dist",
-      "oF" : 0
-    },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 1,
@@ -70,12 +64,116 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/src\/assets\/audio\/bend.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/bend.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/break-the-teeth.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/break-the-teeth.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/consumed.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/consumed.mp3",
+      "oF" : 0
+    },
     "\/src\/assets\/audio\/different-wave.mp3" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 2,
       "oAP" : "\/dist\/assets\/audio\/different-wave.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/head-in-the-clouds.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/head-in-the-clouds.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/leaving-me-soon.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/leaving-me-soon.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/mexico.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/mexico.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/phantom-seas.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/phantom-seas.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/settle-down.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/settle-down.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/sweet-little-love.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/sweet-little-love.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/the-hills.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/the-hills.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/touch-and-go.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/touch-and-go.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/trick-of-the-light.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/trick-of-the-light.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/audio\/unwound.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/audio\/unwound.mp3",
       "oF" : 0
     },
     "\/src\/assets\/fonts\/bootstrap-icons.woff" : {
@@ -15982,7 +16080,7 @@
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "\/tas-lines.png",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 728316412.92752194
+    "lastBuiltDate" : 728407902.88021398
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

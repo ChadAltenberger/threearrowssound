@@ -121,10 +121,6 @@ export default function indexInit() {
         return /(iphone|ipod|ipad).*chrome/.test(userAgent) || /iphone|ipod|ipad.*applewebkit.*(safari)/.test(userAgent);
     }
 
-    let responsiveValue;
-
-    // window.innerWidth >= 992 ? (responsiveValue = 0) : (responsiveValue = "2rem");
-
     window.addEventListener("DOMContentLoaded", () => {
         const introHeight = document.querySelector("#intro").scrollHeight;
 
@@ -219,15 +215,6 @@ export default function indexInit() {
                     start: `-${introHeight + 200} bottom`,
                     end: "top center",
                     // markers: true,
-                },
-            })
-            // Move down About image
-            .from(".about-img-wrapper", {
-                marginBottom: 0,
-                scrollTrigger: {
-                    trigger: "#about",
-                    start: "top bottom",
-                    end: "bottom top",
                 },
             })
             // Parallax section

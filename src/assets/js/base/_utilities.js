@@ -1,17 +1,3 @@
-const utl_pageId = document.querySelector("body").getAttribute("id");
-const utl_setYear = () => (document.querySelector("#current-year").innerHTML = new Date().getFullYear());
-const utl_parseData = (data) => {
-    // Return a Promise which contains Papa.parse method and will either resolve with parsed data or reject with an error
-    return new Promise((resolve, reject) => {
-        Papa.parse(data, {
-            download: true,
-            header: true,
-            complete: resolve, // If completes with no errors, Promise will resolve and any subsequent code will be executed
-            error: reject, // If any error with parsing, Promise will reject and no subsequent code will be executed
-        });
-    });
-};
-const html = String.raw;
 function utl_scrollSpyOffset() {
     const link = document.querySelector(".scrollspy-offset");
 
@@ -35,4 +21,13 @@ function utl_scrollSpyOffset() {
     });
 }
 
-export { utl_pageId, utl_setYear, utl_parseData, html, utl_scrollSpyOffset };
+/* ========= GET AND SET CURRENT YEAR IN FOOTER ========= */
+const utl_setFooterYear = () => (document.querySelector("#current-year").innerHTML = new Date().getFullYear());
+
+/* ================= GET PAGE'S BODY ID ================= */
+const utl_pageId = () => document.querySelector("body").getAttribute("id");
+
+/* ====== FORMAT TEMPLATE LITERALS AS REGULAR HTML ====== */
+const html = String.raw;
+
+export { utl_scrollSpyOffset, utl_setFooterYear, utl_pageId, html };

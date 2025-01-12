@@ -1,0 +1,83 @@
+#main-nav {
+    margin-top: -82.34px;
+
+    .animated-toggler {
+        position: relative;
+        border: none;
+        width: 2.25rem;
+        height: 1.65rem;
+
+        .burger {
+            &-top,
+            &-mdl,
+            &-btm {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                height: 2.5px;
+                background-color: $white;
+                transform: scaleX(1);
+                transform-origin: left;
+                transition: width 0.2s ease-in-out, transform 0.2s;
+            }
+
+            &-top {
+                top: 0;
+            }
+
+            &-mdl {
+                top: 50%;
+                transform: scaleX(1) translateY(-50%);
+                transition-delay: 0.08s;
+            }
+
+            &-btm {
+                bottom: 0;
+                transition-delay: 0.18s;
+            }
+        }
+
+        &:hover {
+            .burger {
+                &-top {
+                    width: 2.85rem;
+                }
+
+                &-mdl {
+                    width: 2.75rem;
+                }
+
+                &-btm {
+                    width: 2.45rem;
+                }
+            }
+        }
+
+        &.opened {
+            .burger {
+                &-top,
+                &-mdl,
+                &-btm {
+                    transition-duration: 0.4s;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                }
+
+                &-mdl {
+                    transform: scaleX(0) translateY(-50%);
+                    transition-delay: 0.1s;
+                }
+
+                &-btm {
+                    transition-delay: 0.2s;
+                }
+            }
+        }
+    }
+
+    .nav-logo {
+        width: 6rem;
+    }
+
+    border-bottom: 1.5px solid #919090;
+}

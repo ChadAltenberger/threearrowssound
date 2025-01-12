@@ -1,3 +1,17 @@
-.text-gray {
-    color: $gray;
+// Letter spacing variables
+$spaces: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+$breakpoints: (sm, md, lg, xl, xxl, xxl2, xxl3, xxl4);
+
+@each $space in $spaces {
+    .ls-#{$space} {
+        letter-spacing: #{$space}px;
+    }
+
+    @each $breakpoint in $breakpoints {
+        @include media-breakpoint-up(#{$breakpoint}) {
+            .ls-#{$breakpoint}-#{$space} {
+                letter-spacing: #{$space}px;
+            }
+        }
+    }
 }

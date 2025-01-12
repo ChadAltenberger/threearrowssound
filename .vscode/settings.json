@@ -12,5 +12,31 @@
         "Delaplane",
         "Redmon",
         "Riddell"
+    ],
+    "folder-color.pathColors": [
+        {
+            "folderPath": "package-lock.json/",
+            "color": "foldercolorizer.olive"
+        },
+        {
+            "folderPath": "package.json/",
+            "color": "foldercolorizer.olive"
+        },
+        {
+            "folderPath": ".gitignore/",
+            "color": "foldercolorizer.OrangeRed"
+        },
+        {
+            "folderPath": "src/assets/js/",
+            "color": "foldercolorizer.Gold"
+        },
+        {
+            "folderPath": "src/assets/partials/",
+            "color": "foldercolorizer.LightBlue"
+        },
+        {
+            "folderPath": "src/assets/scss/",
+            "color": "foldercolorizer.LightPink"
+        }
     ]
 }

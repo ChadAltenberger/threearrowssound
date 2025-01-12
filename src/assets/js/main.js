@@ -14,8 +14,8 @@ import AOS from "aos";
 AOS.init();
 
 /* ======================== BASE ======================== */
-import { utl_setYear, utl_pageId } from "./base/_utilities.js";
-// utl_setYear();
+import { utl_setFooterYear } from "./base/_utilities.js";
+utl_setFooterYear();
 
 /* ===================== COMPONENTS ===================== */
 // import ehElementsInit from "./components/_eh-elements.js";
@@ -24,9 +24,7 @@ import { utl_setYear, utl_pageId } from "./base/_utilities.js";
 // import stickySideInit from "./components/_sticky-sides.js";
 // stickySideInit();
 
-import navbarInit from "./components/_navbar.js";
-navbarInit();
+import navigationInit from "./components/_navigation.js";
+navigationInit();
 
 /* ======================== PAGES ======================= */
-import indexInit from "./pages/index.js";
-utl_pageId === "main-index" && indexInit();

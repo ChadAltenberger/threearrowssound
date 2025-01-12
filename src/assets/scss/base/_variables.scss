@@ -104,12 +104,21 @@ $container-max-widths: (
 // Retina media query variable
 $retina: "(-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx)";
 
-// Breakpoint variables
-$sm: 576px;
-$md: 768px;
-$lg: 992px;
-$xl: 1200px;
-$xxl: 1400px;
-$xxl2: 1600px;
-$xxl3: 1900px;
-$xxl4: 2400px;
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 6,
+    n1: $spacer * -0.25,
+    n2: $spacer * -0.5,
+    n3: -$spacer,
+    n4: $spacer * -1.5,
+    n5: $spacer * -3,
+    n6: $spacer * -6,
+) !default;
+// scss-docs-end spacer-variables-maps

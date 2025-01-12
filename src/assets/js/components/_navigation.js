@@ -1,8 +1,21 @@
 import { Offcanvas } from "bootstrap";
 
-export default function navbarInit() {
+export default function navigationInit() {
     const navLinks = document.querySelectorAll(".nav-link");
     const bsOffcanvas = new Offcanvas("#offcanvas-navbar");
+    const toggler = document.querySelector(".animated-toggler");
+
+    toggler.addEventListener("click", () => {
+        toggler.classList.add("opened");
+        setTimeout(() => {
+            bsOffcanvas.show();
+            // toggler.classList.remove("opened");
+        }, 350);
+    });
+
+    document.querySelector("#offcanvas-navbar").addEventListener("hidden.bs.offcanvas", () => {
+        toggler.classList.remove("opened");
+    });
 
     function toggleOffcanvas() {
         navLinks.forEach((link) => {

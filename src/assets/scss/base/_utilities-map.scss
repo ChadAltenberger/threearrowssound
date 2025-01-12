@@ -37,6 +37,30 @@ $utilities: map-merge(
                 map-get($utilities, "height"),
                 (
                     responsive: true,
+                    values: (
+                        0: 0,
+                        5: 5%,
+                        10: 10%,
+                        15: 15%,
+                        20: 20%,
+                        25: 25%,
+                        30: 30%,
+                        35: 35%,
+                        40: 40%,
+                        45: 45%,
+                        50: 50%,
+                        55: 55%,
+                        60: 60%,
+                        65: 65%,
+                        70: 70%,
+                        75: 75%,
+                        80: 80%,
+                        85: 85%,
+                        90: 90%,
+                        95: 95%,
+                        100: 100%,
+                        fit-content: fit-content,
+                    ),
                 )
             ),
         "font-size":
@@ -82,6 +106,7 @@ $utilities: map-merge(
                     (
                         "primary": $primary,
                         "secondary": $secondary,
+                        "gray": $gray,
                         "body": $body-color,
                         "black": $black,
                         "white": $white,
@@ -102,10 +127,26 @@ $utilities: map-merge(
                     (
                         "primary": $primary,
                         "secondary": $secondary,
+                        "gray": $gray,
                         "white": $white,
                         "black": $black,
                         "body": $body-bg,
                         "transparent": transparent,
+                    )
+                ),
+        ),
+        "border-color": (
+            property: border-color,
+            class: border,
+            values:
+                map-merge(
+                    $theme-colors,
+                    (
+                        "primary": $primary,
+                        "secondary": $secondary,
+                        "gray": $gray,
+                        "white": $white,
+                        "black": $black,
                     )
                 ),
         ),
@@ -121,6 +162,29 @@ $utilities: map-merge(
                 map-get($utilities, "top"),
                 (
                     responsive: true,
+                    values: (
+                        0: 0,
+                        5: 5%,
+                        10: 10%,
+                        15: 15%,
+                        20: 20%,
+                        25: 25%,
+                        30: 30%,
+                        35: 35%,
+                        40: 40%,
+                        45: 45%,
+                        50: 50%,
+                        55: 55%,
+                        60: 60%,
+                        65: 65%,
+                        70: 70%,
+                        75: 75%,
+                        80: 80%,
+                        85: 85%,
+                        90: 90%,
+                        95: 95%,
+                        100: 100%,
+                    ),
                 )
             ),
         "bottom":
@@ -128,6 +192,29 @@ $utilities: map-merge(
                 map-get($utilities, "bottom"),
                 (
                     responsive: true,
+                    values: (
+                        0: 0,
+                        5: 5%,
+                        10: 10%,
+                        15: 15%,
+                        20: 20%,
+                        25: 25%,
+                        30: 30%,
+                        35: 35%,
+                        40: 40%,
+                        45: 45%,
+                        50: 50%,
+                        55: 55%,
+                        60: 60%,
+                        65: 65%,
+                        70: 70%,
+                        75: 75%,
+                        80: 80%,
+                        85: 85%,
+                        90: 90%,
+                        95: 95%,
+                        100: 100%,
+                    ),
                 )
             ),
         "start":
@@ -135,6 +222,29 @@ $utilities: map-merge(
                 map-get($utilities, "start"),
                 (
                     responsive: true,
+                    values: (
+                        0: 0,
+                        5: 5%,
+                        10: 10%,
+                        15: 15%,
+                        20: 20%,
+                        25: 25%,
+                        30: 30%,
+                        35: 35%,
+                        40: 40%,
+                        45: 45%,
+                        50: 50%,
+                        55: 55%,
+                        60: 60%,
+                        65: 65%,
+                        70: 70%,
+                        75: 75%,
+                        80: 80%,
+                        85: 85%,
+                        90: 90%,
+                        95: 95%,
+                        100: 100%,
+                    ),
                 )
             ),
         "end":
@@ -142,6 +252,29 @@ $utilities: map-merge(
                 map-get($utilities, "end"),
                 (
                     responsive: true,
+                    values: (
+                        0: 0,
+                        5: 5%,
+                        10: 10%,
+                        15: 15%,
+                        20: 20%,
+                        25: 25%,
+                        30: 30%,
+                        35: 35%,
+                        40: 40%,
+                        45: 45%,
+                        50: 50%,
+                        55: 55%,
+                        60: 60%,
+                        65: 65%,
+                        70: 70%,
+                        75: 75%,
+                        80: 80%,
+                        85: 85%,
+                        90: 90%,
+                        95: 95%,
+                        100: 100%,
+                    ),
                 )
             ),
         "translate-middle":
@@ -164,22 +297,7 @@ $utilities: map-merge(
     )
 );
 
-.text-decoration-underline-hover {
+[class*="-hover"] {
     cursor: pointer;
-    transition: text-decoration 0.3s;
-}
-
-[class*="opacity"][class$="-hover"] {
-    cursor: pointer;
-    transition: opacity 0.3s;
-}
-
-[class*="text"][class$="-hover"] {
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-[class*="bg"][class$="-hover"] {
-    cursor: pointer;
-    transition: background-color 0.3s;
+    transition: color 0.2s, background-color 0.2s, text-decoration 0.2s, opacity 0.2s;
 }

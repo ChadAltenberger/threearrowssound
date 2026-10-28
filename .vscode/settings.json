@@ -16,27 +16,27 @@
     "folder-color.pathColors": [
         {
             "folderPath": "package-lock.json/",
-            "color": "foldercolorizer.olive"
+            "color": "foldercolorizer.color_87af5f"
         },
         {
             "folderPath": "package.json/",
-            "color": "foldercolorizer.olive"
+            "color": "foldercolorizer.color_87af5f"
         },
         {
             "folderPath": ".gitignore/",
-            "color": "foldercolorizer.OrangeRed"
+            "color": "foldercolorizer.color_ff5f00"
         },
         {
             "folderPath": "src/assets/js/",
-            "color": "foldercolorizer.Gold"
+            "color": "foldercolorizer.color_d7af00"
         },
         {
             "folderPath": "src/assets/partials/",
-            "color": "foldercolorizer.LightBlue"
+            "color": "foldercolorizer.color_afd7ff"
         },
         {
             "folderPath": "src/assets/scss/",
-            "color": "foldercolorizer.LightPink"
+            "color": "foldercolorizer.color_d787af"
         }
     ]
 }

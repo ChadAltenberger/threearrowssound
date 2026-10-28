@@ -1,38 +1,31 @@
-<!-- $keywords = nil -->
+<!-- $description = Professional music production, recording, mixing, and mastering services from Three Arrows Sound. -->
 <!-- $pageTitle = nil -->
 <!-- $path = nil -->
 <!-- $pageId = main-index -->
 <!-- $pageScript = <script type='module' src='assets/js/index.js'></script> -->
-<!-- @import assets/partials/header -->
-<!-- $home = active -->
-<!-- ==================== SCSS LINK ==================== -->
-<!-- [[src/assets/scss/pages/_index.scss]] -->
+<!-- @import assets/partials/head -->
 </head>
 
 <body id="<!-- $pageId? -->" data-bs-spy="scroll" data-bs-target="#main-nav" data-bs-root-margin="0px 0px -50%">
     <div class="pin-trigger w-100 position-absolute top-100 start-0"></div>
     <!-- @import assets/partials/navigation -->
-    <main>
-        <!-- *************************************************** -->
-        <!--                    INTRO/HEADER                     -->
-        <!-- *************************************************** -->
+    <main id="main-content">
+        <!-- ******************** INTRO/HEADER ******************** -->
         <div class="pin-wrapper overflow-x-hidden overflow-y-auto">
-            <section id="index-header" class="p-0">
-                <img class="header-logo" src="assets/img/tas-black.svg" alt="Three Arrows Sound Logo">
+            <header id="index-header" class="p-0">
+                <img class="header-logo" src="assets/media/global/logos/tas-black.svg" alt="Three Arrows Sound Logo">
                 <div class="video-wrapper bg-primary">
                     <div class="video-overlay"></div>
                     <video id="header-vid" class="" src="assets/video/header-vid.mp4" type="video/mp4" webkit-playsinline="true" playsinline="true" autoplay loop muted></video>
-                    <img class="tas-lines" src="assets/img/tas-lines.svg" alt="Lines">
+                    <img class="tas-lines" src="assets/media/global/logos/tas-lines.svg" alt="Lines">
                 </div>
                 <div class="arrows-wrapper">
                     <span class="top-left"></span>
-                    <img class="arrows" src="assets/img/tas-arrows-black.svg" alt="Arrows logo">
+                    <img class="arrows" src="assets/media/global/logos/tas-arrows-black.svg" alt="Arrows logo">
                     <span class="bottom-right"></span>
                 </div>
-            </section>
-            <!-- *************************************************** -->
-            <!--                        INTRO                        -->
-            <!-- *************************************************** -->
+            </header>
+            <!-- ******************** INTRO ******************** -->
             <section id="intro" class="pt-5">
                 <div class="container-fluid">
                     <div class="row">
@@ -47,15 +40,13 @@
                 </div>
             </section>
         </div>
-        <!-- *************************************************** -->
-        <!--                        ABOUT                        -->
-        <!-- *************************************************** -->
+        <!-- ******************** ABOUT ******************** -->
         <section id="about" class="bg-primary position-relative z-2">
             <div class="container">
                 <div class="row justify-content-center gx-lg-5">
                     <div class="col-lg-5">
                         <div class="about-img-wrapper">
-                            <img class="about-img w-100" src="assets/img/tas-about-image.jpg" alt="Chad Altenberger headshot">
+                            <img class="about-img w-100" src="assets/media/index/tas-about-image.webp" alt="Chad Altenberger headshot">
                         </div>
                     </div>
                     <div class="col-lg-7 col-xl-6 text-center text-white">
@@ -68,11 +59,9 @@
                 </div>
             </div>
         </section>
-        <!-- *************************************************** -->
-        <!--                      PORTFOLIO                      -->
-        <!-- *************************************************** -->
+        <!-- ******************** PORTFOLIO ******************** -->
         <section id="portfolio">
-            <img class="portfolio-bg" data-speed="0.05" src="assets/img/portfolio-bg-expanded-2.jpg" alt="">
+            <img class="portfolio-bg" data-speed="0.05" src="assets/media/index/portfolio-bg-expanded-2.webp" alt="">
             <div class="container test">
                 <div class="row">
                     <div class="col text-center">
@@ -80,14 +69,11 @@
                     </div>
                 </div>
                 <div id="samples-wrapper" class="row justify-content-center row-cols-1 row-cols-md-2 g-3 mt-4" data-speed="-.05">
-                    <!-- Audio players rendered via js -->
-                    <!-- [[src/assets/js/pages/index.js]] -->
+                    <!-- Audio players rendered via JS: index.js -->
                 </div>
             </div>
         </section>
-        <!-- *************************************************** -->
-        <!--                      SERVICES                       -->
-        <!-- *************************************************** -->
+        <!-- ******************** SERVICES ******************** -->
         <section id="services" class="bg-primary" data-speed="0.03">
             <div class="container">
                 <div class="row text-white gx-lg-5">
@@ -115,16 +101,14 @@
                 </div>
             </div>
             <div class="spaced-lines">
-                <img class="spaced-line-1" src="assets/img/spaced-lines/line-1.svg" alt="">
-                <img class="spaced-line-2" src="assets/img/spaced-lines/line-2.svg" alt="">
-                <img class="spaced-line-3" src="assets/img/spaced-lines/line-3.svg" alt="">
-                <img class="spaced-line-4" src="assets/img/spaced-lines/line-4.svg" alt="">
-                <img class="spaced-line-5" src="assets/img/spaced-lines/line-5.svg" alt="">
+                <img class="spaced-line-1" src="assets/media/index/spaced-lines/line-1.svg" alt="">
+                <img class="spaced-line-2" src="assets/media/index/spaced-lines/line-2.svg" alt="">
+                <img class="spaced-line-3" src="assets/media/index/spaced-lines/line-3.svg" alt="">
+                <img class="spaced-line-4" src="assets/media/index/spaced-lines/line-4.svg" alt="">
+                <img class="spaced-line-5" src="assets/media/index/spaced-lines/line-5.svg" alt="">
             </div>
         </section>
-        <!-- *************************************************** -->
-        <!--                    CONTACT FORM                     -->
-        <!-- *************************************************** -->
+        <!-- ******************** CONTACT FORM ******************** -->
         <section id="contact">
             <div class="container">
                 <div class="row justify-content-center">
@@ -135,7 +119,6 @@
                     <div class="col-lg-8 mt-5">
                         <form id="contact-form" action="https://formsubmit.co/9bfc5db7d1f6cee4e7cc8fdc6bb08b07" method="POST">
                             <input type="hidden" name="_next" value="https://www.threearrowssound.com/thank-you.html">
-                            <!-- <input type="text" name="_honey" style="display:none"> -->
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
@@ -170,8 +153,6 @@
         </section>
     </main>
     <!-- @import assets/partials/footer -->
-    <!-- ===================== JS LINK ===================== -->
-    <!-- [[src/assets/js/pages/index.js]] -->
 </body>
 
 </html>

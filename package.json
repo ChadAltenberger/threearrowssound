@@ -1,17 +1,17 @@
 {
-  "name": "codekit-project",
+  "name": "three-arrows-sound",
   "version": "1.0.0",
-  "description": "CodeKit created this starter package.json file. You should customize it appropriately.",
+  "description": "Static site for Three Arrows Sound.",
+  "author": "Summit Athletic Media",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Summit-Athletics/threearrowssound.git"
+  },
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
-  "author": "",
-  "license": "UNLICENSED",
-  "homepage": "https://chadaltenberger.github.io/threearrowssound",
-  "repository": {},
   "dependencies": {
-    "@popperjs/core": "^2.11.7",
-    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.9.1",
     "gsap": "^3.12.5"

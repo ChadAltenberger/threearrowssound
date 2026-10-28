@@ -1,30 +1,31 @@
-/* ========================= NPM ======================== */
-// jQuery
-// import "./base/_jquery-global.js";
-
-// Popper.js (* tooltip, popover, dropdown)
-// import * as Popper from "@popperjs/core";
-
+/* ******************** NPM ******************** */
 // Use following imports only where needed (not globally)
 // Bootstrap modules (add as needed)
 import "bootstrap/js/dist/scrollspy";
 
-// AOS
-import AOS from "aos";
-AOS.init();
+/* ******************** BASE ******************** */
+// Import utilities as needed
+import {
+    utl_keyboardFocusMode,
+    utl_setFooterYear,
+    utl_handleModalClose,
+    // utl_ehElements,
+    // utl_toggleCookiesAlert,
+    // utl_anchorScrollOffset,
+} from "./base/_utils";
 
-/* ======================== BASE ======================== */
-import { utl_setFooterYear } from "./base/_utilities.js";
+// Call utility functions after imported
+utl_keyboardFocusMode();
 utl_setFooterYear();
+utl_handleModalClose();
+// utl_ehElements();
+// utl_toggleCookiesAlert();
+// utl_anchorScrollOffset();
 
-/* ===================== COMPONENTS ===================== */
-// import ehElementsInit from "./components/_eh-elements.js";
-// ehElementsInit();
+/* ******************** COMPONENTS ******************** */
+import navigationInit from "./components/_navigation";
 
-// import stickySideInit from "./components/_sticky-sides.js";
-// stickySideInit();
-
-import navigationInit from "./components/_navigation.js";
 navigationInit();
 
-/* ======================== PAGES ======================= */
+/* ******************** PAGES ******************** */
+// Individual page scripts are added in the header of specific page's index file

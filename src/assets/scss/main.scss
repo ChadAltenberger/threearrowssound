@@ -1,6 +1,6 @@
 @import "base/variables";
 
-// bootstrap@5.3.2
+// bootstrap@5.3.8
 // scss-docs-start import-stack
 // Configuration
 @import "../../../node_modules/bootstrap/scss/functions";
@@ -9,6 +9,7 @@
 @import "../../../node_modules/bootstrap/scss/maps";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/utilities";
+
 // Layout & components
 @import "../../../node_modules/bootstrap/scss/root";
 @import "../../../node_modules/bootstrap/scss/reboot";
@@ -41,10 +42,13 @@
 // @import "../../../node_modules/bootstrap/scss/spinners";
 @import "../../../node_modules/bootstrap/scss/offcanvas";
 @import "../../../node_modules/bootstrap/scss/placeholders";
+
 // Helpers
 @import "../../../node_modules/bootstrap/scss/helpers";
+
 // Customize Bootstrap Utility Classes
 @import "base/utilities-map";
+
 // Utilities
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
@@ -52,20 +56,13 @@
 // Bootstrap Icons
 @import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
-// Fancybox - will need to update if we update the npm package to a new version
-// @import 'npm/jquery.fancybox.min.scss';
-
-// AOS animation - will need to update if we update the npm package to a new version
-@import "npm/aos.scss";
-
-/* ======================== BASE ======================== */
+/* ******************** BASE ******************** */
 @import "base/mixins";
-// 'base/helpers';
 @import "base/general";
 @import "base/fontface";
 @import "base/typography";
 
-/* ===================== COMPONENTS ===================== */
+/* ******************** BASE ******************** */
 @import "components/navigation";
 @import "components/footer";
 @import "components/logos";
@@ -74,6 +71,5 @@
 // @import "components/eh-elements";
 // @import "components/sticky-sides";
 
-/* ======================== PAGES ======================= */
+/* ******************** PAGES ******************** */
 @import "pages/index";
-@import "pages/error";

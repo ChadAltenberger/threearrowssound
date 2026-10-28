@@ -23,12 +23,6 @@
       "oAP" : "\/dist\/.vscode",
       "oF" : 0
     },
-    "\/dist" : {
-      "ft" : 65536,
-      "oA" : 1,
-      "oAP" : "\/dist\/dist",
-      "oF" : 0
-    },
     "\/node_modules" : {
       "ft" : 65536,
       "oA" : 1,
@@ -51,118 +45,6 @@
       "oO" : 0,
       "oS" : 1
     },
-    "\/src\/assets\/audio\/bend.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/bend.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/break-the-teeth.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/break-the-teeth.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/consumed.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/consumed.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/different-wave.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/different-wave.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/head-in-the-clouds.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/head-in-the-clouds.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/leaving-me-soon.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/leaving-me-soon.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/mexico.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/mexico.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/phantom-seas.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/phantom-seas.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/settle-down.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/settle-down.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/sweet-little-love.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/sweet-little-love.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/the-hills.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/the-hills.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/touch-and-go.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/touch-and-go.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/trick-of-the-light.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/trick-of-the-light.mp3",
-      "oF" : 0
-    },
-    "\/src\/assets\/audio\/unwound.mp3" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/audio\/unwound.mp3",
-      "oF" : 0
-    },
     "\/src\/assets\/fonts\/bootstrap-icons.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -179,301 +61,13 @@
       "oAP" : "\/dist\/assets\/fonts\/bootstrap-icons.woff2",
       "oF" : 0
     },
-    "\/src\/assets\/img\/arrow.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/arrow.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/icons\/favicon\/android-chrome-192x192.png" : {
-      "ft" : 32768,
-      "iS" : 3665,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/android-chrome-192x192.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/icons\/favicon\/android-chrome-512x512.png" : {
-      "ft" : 32768,
-      "iS" : 17618,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/android-chrome-512x512.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/icons\/favicon\/apple-touch-icon.png" : {
-      "ft" : 32768,
-      "iS" : 3356,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/apple-touch-icon.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/icons\/favicon\/favicon-16x16.png" : {
-      "ft" : 32768,
-      "iS" : 299,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/favicon-16x16.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/icons\/favicon\/favicon-32x32.png" : {
-      "ft" : 32768,
-      "iS" : 414,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/favicon-32x32.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/icons\/favicon\/favicon.ico" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/favicon.ico",
-      "oF" : 0
-    },
-    "\/src\/assets\/img\/icons\/favicon\/site.webmanifest" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 2,
-      "oAP" : "\/dist\/assets\/img\/icons\/favicon\/site.webmanifest",
-      "oF" : 0
-    },
-    "\/src\/assets\/img\/portfolio-bg-expanded-2.jpg" : {
-      "ft" : 16384,
-      "iS" : 505194,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/portfolio-bg-expanded-2.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/portfolio-bg-expanded.jpg" : {
-      "ft" : 16384,
-      "iS" : 667044,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/portfolio-bg-expanded.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/portfolio-bg.jpg" : {
-      "ft" : 16384,
-      "iS" : 108377,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/portfolio-bg.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/sam-flag.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/sam-flag.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/spaced-lines\/line-1.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-1.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/spaced-lines\/line-2.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-2.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/spaced-lines\/line-3.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-3.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/spaced-lines\/line-4.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-4.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/spaced-lines\/line-5.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/spaced-lines\/line-5.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/spaced-tas-lines.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/spaced-tas-lines.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/tas-about-image.jpg" : {
-      "ft" : 16384,
-      "iS" : 281876,
-      "jF" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/tas-about-image.jpg",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/tas-arrows-black.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/tas-arrows-black.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/tas-black.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/tas-black.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/tas-lines.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/tas-lines.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/img\/tas-logo.png" : {
-      "ft" : 32768,
-      "iS" : 89139,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/tas-logo.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
-    },
-    "\/src\/assets\/img\/tas-white.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 0,
-      "oAP" : "\/dist\/assets\/img\/tas-white.svg",
-      "oF" : 0,
-      "opt" : 1,
-      "plM" : 3758088159,
-      "prP" : 0
-    },
-    "\/src\/assets\/js\/base\/_jquery-global.js" : {
+    "\/src\/assets\/js\/base\/_utils.js" : {
       "bF" : 4,
       "ft" : 64,
       "ma" : 3,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/dist\/assets\/js\/_jquery-global.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/assets\/js\/base\/_utilities.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 3,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/dist\/assets\/js\/_utilities.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 0
-    },
-    "\/src\/assets\/js\/components\/_eh-elements.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 3,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/dist\/assets\/js\/_eh-elements.js",
+      "oAP" : "\/dist\/assets\/js\/_utils.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 0
@@ -565,6 +159,325 @@
       "oF" : 1,
       "sC" : 3,
       "tS" : 0
+    },
+    "\/src\/assets\/media\/audio\/bend.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/bend.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/break-the-teeth.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/break-the-teeth.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/consumed.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/consumed.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/different-wave.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/different-wave.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/head-in-the-clouds.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/head-in-the-clouds.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/leaving-me-soon.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/leaving-me-soon.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/mexico.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/mexico.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/phantom-seas.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/phantom-seas.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/settle-down.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/settle-down.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/sweet-little-love.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/sweet-little-love.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/the-hills.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/the-hills.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/touch-and-go.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/touch-and-go.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/trick-of-the-light.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/trick-of-the-light.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/audio\/unwound.mp3" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/audio\/unwound.mp3",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/global\/elements\/arrow.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/elements\/arrow.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/global\/favicon\/android-chrome-192x192.png" : {
+      "ft" : 32768,
+      "iS" : 3665,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/android-chrome-192x192.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/media\/global\/favicon\/android-chrome-512x512.png" : {
+      "ft" : 32768,
+      "iS" : 17618,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/android-chrome-512x512.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/media\/global\/favicon\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 3356,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/media\/global\/favicon\/favicon-16x16.png" : {
+      "ft" : 32768,
+      "iS" : 299,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/favicon-16x16.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/media\/global\/favicon\/favicon-32x32.png" : {
+      "ft" : 32768,
+      "iS" : 414,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/favicon-32x32.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/media\/global\/favicon\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/favicon.ico",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/global\/favicon\/site.webmanifest" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/assets\/media\/global\/favicon\/site.webmanifest",
+      "oF" : 0
+    },
+    "\/src\/assets\/media\/global\/logos\/tas-arrows-black.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/logos\/tas-arrows-black.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/global\/logos\/tas-black.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/logos\/tas-black.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/global\/logos\/tas-lines.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/logos\/tas-lines.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/global\/logos\/tas-white.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/global\/logos\/tas-white.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/index\/portfolio-bg-expanded-2.jpg" : {
+      "ft" : 16384,
+      "iS" : 516579,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/portfolio-bg-expanded-2.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
+    },
+    "\/src\/assets\/media\/index\/spaced-lines\/line-1.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/spaced-lines\/line-1.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/index\/spaced-lines\/line-2.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/spaced-lines\/line-2.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/index\/spaced-lines\/line-3.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/spaced-lines\/line-3.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/index\/spaced-lines\/line-4.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/spaced-lines\/line-4.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/index\/spaced-lines\/line-5.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/spaced-lines\/line-5.svg",
+      "oF" : 0,
+      "opt" : 1,
+      "plM" : 3758088159,
+      "prP" : 0
+    },
+    "\/src\/assets\/media\/index\/tas-about-image.jpg" : {
+      "ft" : 16384,
+      "iS" : 281876,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/dist\/assets\/media\/index\/tas-about-image.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "ou" : "lpckwebp-default",
+      "q" : 80,
+      "rq" : 75
     },
     "\/src\/assets\/partials" : {
       "ft" : 65536,
@@ -15730,21 +15643,6 @@
       "pg" : 2,
       "sct" : 0
     },
-    "\/src\/assets\/scss\/base\/_helpers.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 2,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 3,
-      "oA" : 1,
-      "oAP" : "\/dist\/assets\/scss\/css\/_helpers.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 2,
-      "sct" : 0
-    },
     "\/src\/assets\/scss\/base\/_mixins.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -15971,21 +15869,6 @@
       "pg" : 2,
       "sct" : 0
     },
-    "\/src\/assets\/scss\/pages\/_error.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 2,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 3,
-      "oA" : 1,
-      "oAP" : "\/dist\/assets\/scss\/css\/_error.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 2,
-      "sct" : 0
-    },
     "\/src\/assets\/scss\/pages\/_index.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -16033,6 +15916,22 @@
       "oAP" : "\/dist\/index.html",
       "oF" : 0
     },
+    "\/src\/robots.txt" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/robots.txt",
+      "oF" : 0
+    },
+    "\/src\/sitemap.xml" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 2,
+      "oAP" : "\/dist\/sitemap.xml",
+      "oF" : 0
+    },
     "\/src\/style-guide.kit" : {
       "cB" : 1,
       "ft" : 2048,
@@ -16048,19 +15947,6 @@
       "oA" : 0,
       "oAP" : "\/dist\/thank-you.html",
       "oF" : 0
-    },
-    "\/tas-lines.png" : {
-      "ft" : 32768,
-      "iS" : 1265,
-      "oA" : 0,
-      "oAP" : "\/dist\/tas-lines.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-default",
-      "q" : 80,
-      "rq" : 75
     }
   },
   "hooks" : [
@@ -16073,9 +15959,9 @@
     "creationDate" : 499370232,
     "displayValue" : "threearrowssound",
     "displayValueWasSetByUser" : 0,
-    "iconImageName" : "\/tas-lines.png",
-    "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 758389568.56295204
+    "iconImageName" : "\/src\/assets\/media\/global\/favicon\/apple-touch-icon.png",
+    "iconImageWasSetByUser" : 0,
+    "lastBuiltDate" : 814892823.733513
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

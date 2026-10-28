@@ -1,303 +1,314 @@
-$utilities: map-merge(
+@use "sass:map";
+
+/* ******************** VALUE MAP GENERATORS ******************** */
+// Reusable value maps used across utilities
+// Initialize empty maps that will be populated via loops
+$percentage-positive: ();
+$percentage-negative: ();
+$opacity-values: ();
+$ls-values: ();
+$cols-values: ();
+
+// Generate positive percentage values (0–100)
+// e.g. w-50, start-25, top-lg-75, etc.
+@for $i from 0 through 100 {
+    $percentage-positive: map.set($percentage-positive, $i, $i * 1%);
+}
+
+// Generate negative percentage values (n1–n100)
+// e.g. start-n50, top-lg-n25, etc.
+@for $i from 1 through 100 {
+    $percentage-negative: map.set($percentage-negative, n#{$i}, -$i * 1%);
+}
+
+// Generate opacity values (0–100 step 5)
+// Converts to decimal scale (0 → 1)
+// Example: opacity-25 → opacity: 0.25
+@for $i from 0 through 100 {
+    $opacity-values: map.set($opacity-values, $i * 5, ($i * 5) / 100);
+}
+
+// Generate px values (1–15) for letter-spacing
+// e.g. ls-1, ls-15, ls-lg-3, etc.
+@for $i from 1 through 15 {
+    $ls-values: map.set($ls-values, $i, $i * 1px);
+}
+
+// Generate values (1–12)
+// e.g. cols-1, cols-lg-4, etc.
+@for $i from 1 through 12 {
+    $cols-values: map.set($cols-values, $i, $i * 1);
+}
+
+// Combine positive + negative percentages
+// Used by positioning utilities
+$percentage-values: map.merge(
+    $percentage-positive,
+    map.merge(
+        $percentage-negative,
+        (
+            auto: auto,
+        )
+    )
+);
+
+// Additional values for width/height
+$dimension-values: map.merge(
+    $percentage-values,
+    (
+        fit-content: fit-content,
+        max-content: max-content,
+        fill: -webkit-fill-available,
+    )
+);
+
+/* ******************** UTILITY GROUPS ******************** */
+// Will be extended with additional behavior via loops
+$dimension-utils: ("width", "height");
+$responsive-utils: (
+    "background-color",
+    "border",
+    "border-top",
+    "border-end",
+    "border-bottom",
+    "border-start",
+    "border-color",
+    "font-size",
+    "position",
+    "overflow-x",
+    "overflow-y"
+); // Needs only 'responsive: true' addition
+$percentage-position-utils: ("top", "bottom", "start", "end");
+$rounded-utils: ("rounded", "rounded-top", "rounded-end", "rounded-bottom", "rounded-start");
+
+// Extend percentage values for width/height
+@each $utility in $dimension-utils {
+    $utilities: map.merge(
+        $utilities,
+        (
+            #{$utility}: map.merge(
+                    map.get($utilities, $utility),
+                    (
+                        responsive: true,
+                        values: $dimension-values,
+                    )
+                )
+        )
+    );
+}
+
+// Enable responsive variants for selected Bootstrap utilities
+@each $utility in $responsive-utils {
+    $utilities: map.merge(
+        $utilities,
+        (
+            #{$utility}: map.merge(
+                    map.get($utilities, $utility),
+                    (
+                        responsive: true,
+                    )
+                )
+        )
+    );
+}
+
+// Extend positioning utilities to support percentage offsets
+@each $utility in $percentage-position-utils {
+    $utilities: map.merge(
+        $utilities,
+        (
+            #{$utility}: map.merge(
+                    map.get($utilities, $utility),
+                    (
+                        responsive: true,
+                        values: $percentage-values,
+                    )
+                )
+        )
+    );
+}
+
+// Extend rounded(border-radius) values for larger radii
+@each $utility in $rounded-utils {
+    $utilities: map.merge(
+        $utilities,
+        (
+            #{$utility}: map.merge(
+                    map.get($utilities, $utility),
+                    (
+                        responsive: true,
+                        values: map.merge(
+                                map.get(map.get($utilities, $utility), "values"),
+                                (
+                                    6: 3rem,
+                                    7: 4rem,
+                                    8: 6rem,
+                                )
+                            ),
+                    )
+                )
+        )
+    );
+}
+
+/* ******************** MAIN MAP MERGE ******************** */
+$utilities: map.merge(
     $utilities,
     (
-        "width":
-            map-merge(
-                map-get($utilities, "width"),
-                (
-                    responsive: true,
-                    values: (
-                        0: 0,
-                        5: 5%,
-                        10: 10%,
-                        15: 15%,
-                        20: 20%,
-                        25: 25%,
-                        30: 30%,
-                        35: 35%,
-                        40: 40%,
-                        45: 45%,
-                        50: 50%,
-                        55: 55%,
-                        60: 60%,
-                        65: 65%,
-                        70: 70%,
-                        75: 75%,
-                        80: 80%,
-                        85: 85%,
-                        90: 90%,
-                        95: 95%,
-                        100: 100%,
-                        fit-content: fit-content,
-                    ),
-                )
-            ),
-        "height":
-            map-merge(
-                map-get($utilities, "height"),
-                (
-                    responsive: true,
-                    values: (
-                        0: 0,
-                        5: 5%,
-                        10: 10%,
-                        15: 15%,
-                        20: 20%,
-                        25: 25%,
-                        30: 30%,
-                        35: 35%,
-                        40: 40%,
-                        45: 45%,
-                        50: 50%,
-                        55: 55%,
-                        60: 60%,
-                        65: 65%,
-                        70: 70%,
-                        75: 75%,
-                        80: 80%,
-                        85: 85%,
-                        90: 90%,
-                        95: 95%,
-                        100: 100%,
-                        fit-content: fit-content,
-                    ),
-                )
-            ),
-        "font-size":
-            map-merge(
-                map-get($utilities, "font-size"),
-                (
-                    responsive: true,
-                )
-            ),
-        "line-height":
-            map-merge(
-                map-get($utilities, "line-height"),
-                (
-                    responsive: true,
-                )
-            ),
-        "opacity": (
-            property: opacity,
-            class: opacity,
-            state: hover,
+        "font-family": (
+            property: font-family,
+            class: font,
             values: (
-                0: 0,
-                10: 0.1,
-                25: 0.25,
-                50: 0.5,
-                75: 0.75,
-                90: 0.9,
-                100: 1,
+                "primary": $font-primary,
+                "secondary": $font-secondary,
             ),
         ),
-        "text-decoration": (
-            property: text-decoration,
-            state: hover,
-            values: none underline line-through,
-        ),
+        "line-height": map.merge(
+                map.get($utilities, "line-height"),
+                (
+                    responsive: true,
+                    values: (
+                        0: 0,
+                        "xxs": 0.5,
+                        "xs": 0.75,
+                        1: 1,
+                        "sm": $line-height-sm,
+                        "base": $line-height-base,
+                        "lg": $line-height-lg,
+                        "xl": 2.25,
+                    ),
+                )
+            ),
+        "border-width": map.merge(
+                map.get($utilities, "border-width"),
+                (
+                    responsive: true,
+                    values: $ls-values,
+                )
+            ),
+        "border-color": map.merge(
+                map.get($utilities, "border-color"),
+                (
+                    state: hover,
+                )
+            ),
+        "opacity": map.merge(
+                map.get($utilities, "opacity"),
+                (
+                    state: hover,
+                    responsive: true,
+                    values: $opacity-values,
+                )
+            ),
+        "text-decoration": map.merge(
+                map.get($utilities, "text-decoration"),
+                (
+                    state: hover,
+                    responsive: true,
+                )
+            ),
         "color": (
             property: color,
             class: text,
             state: hover,
-            values:
-                map-merge(
-                    $theme-colors,
-                    (
-                        "primary": $primary,
-                        "secondary": $secondary,
-                        "gray": $gray,
-                        "body": $body-color,
-                        "black": $black,
-                        "white": $white,
-                        "muted": $text-muted,
-                        "black-50": rgba($black, 0.5),
-                        "white-50": rgba($white, 0.5),
-                        "reset": inherit,
-                    )
-                ),
+            responsive: true,
+            values: $theme-colors,
         ),
-        "background-color": (
-            property: background-color,
-            class: bg,
-            state: hover,
-            values:
-                map-merge(
-                    $theme-colors,
-                    (
-                        "primary": $primary,
-                        "secondary": $secondary,
-                        "gray": $gray,
-                        "white": $white,
-                        "black": $black,
-                        "body": $body-bg,
-                        "transparent": transparent,
-                    )
-                ),
-        ),
-        "border-color": (
-            property: border-color,
-            class: border,
-            values:
-                map-merge(
-                    $theme-colors,
-                    (
-                        "primary": $primary,
-                        "secondary": $secondary,
-                        "gray": $gray,
-                        "white": $white,
-                        "black": $black,
-                    )
-                ),
-        ),
-        "position":
-            map-merge(
-                map-get($utilities, "position"),
+        "background-color": map.merge(
+                map.get($utilities, "background-color"),
                 (
-                    responsive: true,
+                    state: hover,
                 )
             ),
-        "top":
-            map-merge(
-                map-get($utilities, "top"),
+        "bg-opacity": map.merge(
+                map.get($utilities, "bg-opacity"),
                 (
+                    state: hover,
                     responsive: true,
-                    values: (
-                        0: 0,
-                        5: 5%,
-                        10: 10%,
-                        15: 15%,
-                        20: 20%,
-                        25: 25%,
-                        30: 30%,
-                        35: 35%,
-                        40: 40%,
-                        45: 45%,
-                        50: 50%,
-                        55: 55%,
-                        60: 60%,
-                        65: 65%,
-                        70: 70%,
-                        75: 75%,
-                        80: 80%,
-                        85: 85%,
-                        90: 90%,
-                        95: 95%,
-                        100: 100%,
-                    ),
+                    values: $opacity-values,
                 )
             ),
-        "bottom":
-            map-merge(
-                map-get($utilities, "bottom"),
+        "translate-middle": map.merge(
+                map.get($utilities, "translate-middle"),
                 (
-                    responsive: true,
-                    values: (
-                        0: 0,
-                        5: 5%,
-                        10: 10%,
-                        15: 15%,
-                        20: 20%,
-                        25: 25%,
-                        30: 30%,
-                        35: 35%,
-                        40: 40%,
-                        45: 45%,
-                        50: 50%,
-                        55: 55%,
-                        60: 60%,
-                        65: 65%,
-                        70: 70%,
-                        75: 75%,
-                        80: 80%,
-                        85: 85%,
-                        90: 90%,
-                        95: 95%,
-                        100: 100%,
-                    ),
-                )
-            ),
-        "start":
-            map-merge(
-                map-get($utilities, "start"),
-                (
-                    responsive: true,
-                    values: (
-                        0: 0,
-                        5: 5%,
-                        10: 10%,
-                        15: 15%,
-                        20: 20%,
-                        25: 25%,
-                        30: 30%,
-                        35: 35%,
-                        40: 40%,
-                        45: 45%,
-                        50: 50%,
-                        55: 55%,
-                        60: 60%,
-                        65: 65%,
-                        70: 70%,
-                        75: 75%,
-                        80: 80%,
-                        85: 85%,
-                        90: 90%,
-                        95: 95%,
-                        100: 100%,
-                    ),
-                )
-            ),
-        "end":
-            map-merge(
-                map-get($utilities, "end"),
-                (
-                    responsive: true,
-                    values: (
-                        0: 0,
-                        5: 5%,
-                        10: 10%,
-                        15: 15%,
-                        20: 20%,
-                        25: 25%,
-                        30: 30%,
-                        35: 35%,
-                        40: 40%,
-                        45: 45%,
-                        50: 50%,
-                        55: 55%,
-                        60: 60%,
-                        65: 65%,
-                        70: 70%,
-                        75: 75%,
-                        80: 80%,
-                        85: 85%,
-                        90: 90%,
-                        95: 95%,
-                        100: 100%,
-                    ),
-                )
-            ),
-        "translate-middle":
-            map-merge(
-                map-get($utilities, "translate-middle"),
-                (
-                    values:
-                        map-merge(
-                            map-get(map-get($utilities, "translate-middle"), "values"),
+                    values: map.merge(
+                            map.get(map.get($utilities, "translate-middle"), "values"),
                             (
-                                null: translate(-50%, -50%),
-                                x: translateX(-50%),
-                                y: translateY(-50%),
                                 none: translate(0, 0),
                             )
                         ),
                     responsive: true,
                 )
             ),
+        "overflow-y": map.merge(
+                map.get($utilities, "overflow-y"),
+                (
+                    values: auto hidden clip visible scroll,
+                )
+            ),
+        "overflow-x": map.merge(
+                map.get($utilities, "overflow-x"),
+                (
+                    values: auto hidden clip visible scroll,
+                )
+            ),
+        "z-index": map.merge(
+                map.get($utilities, "z-index"),
+                (
+                    responsive: true,
+                )
+            ),
+        /* ******************** CUSTOM UTILITIES ******************** */
+        "flip": (
+                property: transform,
+                class: flip,
+                responsive: true,
+                values: (
+                    x: scaleX(-1),
+                    y: scaleY(-1),
+                ),
+            ),
+        "scale": (
+            property: transform,
+            class: scale,
+            state: hover,
+            responsive: true,
+            values: (
+                1: scale(1.05),
+                2: scale(1.1),
+            ),
+        ),
+        "ls": (
+            property: letter-spacing,
+            class: ls,
+            responsive: true,
+            values: $ls-values,
+        ),
+        "text-box": (
+            property: text-box,
+            class: text-box,
+            values: (
+                text: trim-both cap text,
+                alphabetic: trim-both cap alphabetic,
+            ),
+        ),
+        "cols": (
+            property: columns,
+            class: cols,
+            responsive: true,
+            values: $cols-values,
+        ),
     )
 );
 
+// Add pointer + transition behavior to all hover utilities
 [class*="-hover"] {
     cursor: pointer;
-    transition: color 0.2s, background-color 0.2s, text-decoration 0.2s, opacity 0.2s;
+    transition:
+        color 0.2s ease-in-out,
+        background-color 0.2s ease-in-out,
+        text-decoration 0.2s ease-in-out,
+        transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out,
+        border-color 0.2s ease-in-out;
 }

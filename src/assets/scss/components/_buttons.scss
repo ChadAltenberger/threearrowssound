@@ -1,13 +1,35 @@
+button {
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
 .btn {
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-border-color: none;
+    --bs-btn-hover-color: none;
     font-family: $secondary;
     text-transform: uppercase;
 
-    &-outline-white {
-        border: 2px solid $white;
-        color: $white;
+    // GLOBAL BTN STYLES
+    @each $name, $color in $theme-colors {
+        &.btn-outline-#{$name} {
+            border: 2px solid $color;
+            color: $color;
 
+            &:hover {
+                background-color: $color;
+            }
+        }
+    }
+
+    &.btn-outline-primary {
         &:hover {
-            background-color: $white;
+            color: $white;
+        }
+    }
+    &.btn-outline-white {
+        &:hover {
             color: $primary;
         }
     }

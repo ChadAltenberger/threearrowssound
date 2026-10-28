@@ -247,3 +247,50 @@ window.addEventListener("resize", () => {
         oldWidth = window.innerWidth;
     }
 });
+
+/* ******************** FORM SUBMIT/REDIRECT ******************** */
+// Formspree's free plan doesn't support redirect on submit -
+// This hijacks control on submit and manually redirects if no errors
+const contactForm = document.querySelector("#contact-form");
+
+if (contactForm) {
+    const submitBtn = contactForm.querySelector("#contact-submit");
+    const formStatus = contactForm.querySelector("#form-status");
+
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        if (!contactForm.reportValidity()) return;
+
+        const originalText = submitBtn.textContent;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+        formStatus.textContent = "";
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json",
+                },
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || !result.ok) {
+                throw new Error(result.errors?.map((error) => error.message).join(", ") || "Unable to send your message. Please try again.");
+            }
+
+            window.location.href = "thank-you.html";
+        } catch (error) {
+            console.error("Contact form submission failed:", error);
+
+            formStatus.textContent = error.message || "Something went wrong. Please try again.";
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    });
+}

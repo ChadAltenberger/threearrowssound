@@ -117,35 +117,29 @@
                         <p class="lead">Please complete the form below to request a quote or for general inquiries</p>
                     </div>
                     <div class="col-lg-8 mt-5">
-                        <form id="contact-form" action="https://formsubmit.co/9bfc5db7d1f6cee4e7cc8fdc6bb08b07" method="POST">
-                            <input type="hidden" name="_next" value="https://www.threearrowssound.com/thank-you.html">
+                        <form id="contact-form" action="https://formspree.io/f/mzeegokp" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="mb-3">
-                                        <label class="form-label font-secondary text-uppercase" for="first-name">Name <span class="text-secondary">*</span></label>
-                                        <input id="first-name" class="form-control border-primary" type="text" name="Name" aria-label="Field to enter first name" required>
+                                        <label class="form-label font-secondary text-uppercase" for="name">Name <span class="text-secondary">*</span></label>
+                                        <input id="name" class="form-control border-primary" type="text" name="Name" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label class="form-label font-secondary text-uppercase" for="email">Email <span class="text-secondary">*</span></label>
-                                        <input id="email" class="form-control border-primary" type="email" name="Email" aria-label="Field to enter email" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="mb-3">
-                                        <label class="form-label font-secondary text-uppercase" for="subject">Subject <span class="text-secondary">*</span></label>
-                                        <input id="subject" class="form-control border-primary" type="text" name="Subject" aria-label="Field to enter subject" required>
+                                        <input id="email" class="form-control border-primary" type="email" name="Email" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="mb-3">
                                         <label class="form-label font-secondary text-uppercase" for="message">Message</label>
-                                        <textarea id="message" class="form-control border-primary" type="text" name="Message" rows="4" cols="35"></textarea>
+                                        <textarea id="message" class="form-control border-primary" name="Message" rows="4"></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <button class="btn btn-lg btn-outline-primary w-30 w-lg-25" type="submit">Submit</button>
+                            <div id="form-status" class="mb-3" role="status" aria-live="polite"></div>
+                            <button id="contact-submit" class="btn btn-lg btn-outline-primary w-30 w-lg-25" type="submit">Submit</button>
                         </form>
                     </div>
                 </div>

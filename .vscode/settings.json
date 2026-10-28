@@ -2,10 +2,10 @@
     "workbench.colorCustomizations": {
         "titleBar.activeBackground": "#00ABAC", // Top window bar
         "titleBar.inactiveBackground": "#00ABAC99", // Top window bar inactive (add '99' to end of hex)
-        "titleBar.activeForeground": "#0c090a", // Top window bar - text
+        "titleBar.activeForeground": "#1a1919", // Top window bar - text
 
         "activityBarBadge.background": "#00ABAC", // Side bar - badge icon background
-        "activityBarBadge.foreground": "#0c090a", // Side bar - badge text
+        "activityBarBadge.foreground": "#1a1919", // Side bar - badge text
         "activityBar.activeBorder": "#00ABAC" // Side bar - active indicator border
     },
     "cSpell.words": [
